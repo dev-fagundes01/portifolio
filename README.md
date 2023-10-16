@@ -1,6 +1,6 @@
 # React + Vite
 
-Deploy: https://portifolio-react-rosy.vercel.app/
+Link: https://portifolio-react-rosy.vercel.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
