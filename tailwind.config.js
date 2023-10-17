@@ -15,6 +15,7 @@ export default {
       },
       width: {
         3: '30rem',
+        18: '4.25rem',
         30: '30vw',
         40: '40vw',
         50: '50vw',
@@ -36,8 +37,14 @@ export default {
         wide: '5px',
         widest: '5rem'
       },
+      lineHeight: {
+        nd: '0px'
+      },
       fontSize: {
+        0: '0px',
         '11xl': '150px',
+        nx: '0.4rem',
+        xx: '0.6rem',
         '7xl': '5rem',
         '9xl': '7rem',
         '13xl': '13rem'

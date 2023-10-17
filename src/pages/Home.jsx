@@ -11,7 +11,7 @@ function Home() {
       <div className="flex flex-col gap-8 my-12 3xl:flex-row 3xl:my-0">
         <div
           className="flex place-items-center
-    align-items-center justify-center flex-col gap-3 3xl:gap-80"
+    align-items-center justify-center flex-col gap-3 3xl:gap-20"
         >
           <h3 className="text-xl 3xl:w-55 3xl:text-9xl">Oi!, eu sou</h3>
 
