@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
+  cursor: pointer;
+  margin-top: 1rem;
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -16,4 +18,14 @@ export const Container = styled.div`
       transform: translateY(-15px);
       position: absolute;
     `};
+
+  ul {
+    pointer-events: none;
+
+    ${({ isVisible }) =>
+      isVisible &&
+      css`
+        pointer-events: all;
+      `}
+  }
 `

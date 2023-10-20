@@ -80,14 +80,14 @@ const Projects = () => {
       <div className="flex flex-col items-center bg-transparent">
         <h2 className="text-5xl text-red-900 mb-2">Principais Projetos</h2>
         <Swiper
-          slidesPerView={2}
+          slidesPerView={1}
           cssMode={true}
           navigation={true}
           pagination={true}
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="h-60 w-9/12"
+          className="block md:hidden h-60 w-9/12"
         >
           {infoProjects.map((projects) => (
             <SwiperSlide
@@ -101,6 +101,58 @@ const Projects = () => {
               />
               <div className="absolute flex flex-col w-3/5 gap-3">
                 <h5 className="text-3xl">{projects.projectsName}</h5>
+                <p className="text-lg leading-none">{projects.description}</p>
+                <p className="text-lg leading-none">{projects.technologies}</p>
+                <div className="flex items-center justify-center gap-1 flex-row">
+                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                    <a
+                      className="text-sm"
+                      target="_blank"
+                      href={projects.links1}
+                      rel="noreferrer"
+                    >
+                      Projeto
+                    </a>
+                  </button>
+                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                    <a
+                      className="text-sm"
+                      target="_blank"
+                      href={projects.links2}
+                      rel="noreferrer"
+                    >
+                      Repositório
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Swiper
+          slidesPerView={3}
+          cssMode={true}
+          navigation={true}
+          pagination={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          className="hidden md:block h-60 w-9/12"
+        >
+          {infoProjects.map((projects) => (
+            <SwiperSlide
+              className="relative text-center bg-transparent flex justify-center items-center flex-col mx-2"
+              key={projects.projectsName}
+            >
+              <img
+                className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
+                src={projects.projectsImage}
+                alt={projects.alt}
+              />
+              <div className="absolute flex flex-col w-3/5 gap-3">
+                <h5 className="text-3xl flex justify-center">
+                  {projects.projectsName}
+                </h5>
                 <p className="text-lg leading-none">{projects.description}</p>
                 <p className="text-lg leading-none">{projects.technologies}</p>
                 <div className="flex items-center justify-center gap-1 flex-row">

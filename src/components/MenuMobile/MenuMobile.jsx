@@ -5,7 +5,7 @@ import { Container } from './style'
 
 const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
   return (
-    <Container className="hidden" isVisible={menuIsVisible}>
+    <Container isVisible={menuIsVisible}>
       <AiOutlineClose onClick={() => setMenuIsVisible(false)} />
       <ul className="cursor-pointer gap-14 2xl:hidden">
         <li className="leading-3 h-6">
