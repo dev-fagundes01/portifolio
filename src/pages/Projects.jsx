@@ -76,11 +76,9 @@ const infoProjects = [
 
 const Projects = () => {
   return (
-    <section className="h-auto  relative 3xl:py-5 3xl:pt-80">
-      <div className="flex flex-col items-center bg-transparent text-sn text-blue-100 m-0 p-0">
-        <h2 className="text-2xl mb-1 3xl:text-8xl 3xl:mb-20">
-          Principais Projetos
-        </h2>
+    <section className="h-auto relative">
+      <div className="flex flex-col items-center bg-transparent">
+        <h2 className="text-5xl text-red-900 mb-2">Principais Projetos</h2>
         <Swiper
           slidesPerView={2}
           cssMode={true}
@@ -93,28 +91,22 @@ const Projects = () => {
         >
           {infoProjects.map((projects) => (
             <SwiperSlide
-              className="relative text-center text-lg bg-transparent flex justify-center items-center flex-col 3xl:mx-20"
+              className="relative text-center bg-transparent flex justify-center items-center flex-col mx-2"
               key={projects.projectsName}
             >
               <img
-                className="block w-full h-full rounded-3xl opacity-10 hover:opacity-80"
+                className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
                 src={projects.projectsImage}
                 alt={projects.alt}
               />
-              <div className="absolute flex flex-col gap-3 w-20 3xl:gap-10 3xl:h-650 3xl:w-3/5 3xl:mb-20">
-                <h5 className="text-sm 3xl:text-9xl 3xl:mb-5">
-                  {projects.projectsName}
-                </h5>
-                <p className="text-xx leading-3 3xl:text-6xl 3xl:leading-none">
-                  {projects.description}
-                </p>
-                <p className="text-xx leading-3 3xl:text-6xl 3xl:leading-none">
-                  {projects.technologies}
-                </p>
-                <div className="flex flex-col items-center justify-center gap-1 3xl:flex-row">
-                  <button className="flex items-center justify-center bg-blue-700 rounded-full w-9 h-4 3xl:p-3 3xl:w-52 3xl:h-auto hover:bg-red-500 active:bg-red-700">
+              <div className="absolute flex flex-col w-3/5 gap-3">
+                <h5 className="text-3xl">{projects.projectsName}</h5>
+                <p className="text-lg leading-none">{projects.description}</p>
+                <p className="text-lg leading-none">{projects.technologies}</p>
+                <div className="flex items-center justify-center gap-1 flex-row">
+                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
-                      className="text-nx 3xl:text-4xl"
+                      className="text-sm"
                       target="_blank"
                       href={projects.links1}
                       rel="noreferrer"
@@ -122,9 +114,9 @@ const Projects = () => {
                       Projeto
                     </a>
                   </button>
-                  <button className="flex items-center justify-center bg-blue-700 rounded-full w-9 h-4 3xl:p-3 3xl:w-52 3xl:h-auto hover:bg-red-500 active:bg-red-700">
+                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
-                      className="text-nx 3xl:text-4xl"
+                      className="text-sm"
                       target="_blank"
                       href={projects.links2}
                       rel="noreferrer"

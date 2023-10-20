@@ -1,53 +1,53 @@
-import { useState } from 'react'
-import { HiMenuAlt4 } from 'react-icons/hi'
+// import { useState } from 'react'
+// import { HiMenuAlt4 } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 
-import MenuMobile from '../MenuMobile/MenuMobile'
+// import MenuMobile from '../MenuMobile/MenuMobile'
 import { Nav } from './style'
 
 function Header() {
-  const [menuIsVisible, setMenuIsVisible] = useState(false)
+  // const [menuIsVisible, setMenuIsVisible] = useState(false)
 
   return (
-    <header className="z-10 h-32 flex w-full 3xl:items-center 3xl:justify-between 3xl:p-20">
+    <header className="h-32 flex w-full justify-between">
       <Nav
-        isVisible={menuIsVisible}
-        className="3xl:flex 3xl:items-center 3xl:justify-center mr-20"
+        // isVisible={menuIsVisible}
+        className="flex justify-center"
       >
-        <HiMenuAlt4 id="menu" onClick={() => setMenuIsVisible(true)} />
+        {/* <HiMenuAlt4 id="menu" onClick={() => setMenuIsVisible(true)} />
         <MenuMobile
           menuIsVisible={menuIsVisible}
           setMenuIsVisible={setMenuIsVisible}
-        />
+        /> */}
 
-        <ul className="hidden cursor-pointer gap-14 3xl:flex">
-          <li className="leading-normal h-6">
+        <ul className="cursor-pointer gap-4 flex">
+          <li className="leading-normal h-3">
             <Link
-              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 3xl:text-7xl"
+              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 text-2xl"
               to="/"
             >
               Inicio
             </Link>
           </li>
-          <li className="leading-normal h-6">
+          <li className="leading-normal h-3">
             <Link
-              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 3xl:text-7xl"
+              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 text-2xl"
               to="/sobre"
             >
               Sobre Mim
             </Link>
           </li>
-          <li className="leading-normal h-6">
+          <li className="leading-normal h-3">
             <Link
-              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 3xl:text-7xl"
+              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 text-2xl"
               to="/projetos"
             >
               Projetos
             </Link>
           </li>
-          <li className="leading-normal h-6">
+          <li className="leading-normal h-3">
             <Link
-              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 3xl:text-7xl"
+              className="no-underline text-rose-400 hover:duration-1000 hover:text-rose-900 text-2xl"
               to="/habilidades"
             >
               Habilidades
@@ -55,7 +55,7 @@ function Header() {
           </li>
         </ul>
       </Nav>
-      <h1 className="absolute right-4 text-xl 3xl:static 3xl:mt-22 3xl:text-9xl">
+      <h1 className="text-2xl mt-2.5">
         <span className="text-rose-900">Porti</span>fólio
       </h1>
     </header>

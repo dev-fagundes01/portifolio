@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const DivTS = styled.div`
+export const LiTS = styled.li`
   div {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 3.5rem;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
@@ -22,9 +22,9 @@ export const DivTS = styled.div`
   }
   div::after {
     content: '';
-    display: none;
-    width: 40px;
-    height: 40px;
+    display: block;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 4px solid #000;
     border-color: #000 transparent #000 transparent;
