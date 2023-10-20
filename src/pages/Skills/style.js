@@ -22,7 +22,7 @@ export const LiTS = styled.li`
   }
   div::after {
     content: '';
-    display: block;
+    display: none;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -30,7 +30,7 @@ export const LiTS = styled.li`
     border-color: #000 transparent #000 transparent;
     animation: girar 1s linear infinite;
 
-    @media (min-width: 2180px) {
+    @media (min-width: 768px) {
       display: block;
     }
   }

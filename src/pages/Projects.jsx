@@ -78,7 +78,9 @@ const Projects = () => {
   return (
     <section className="h-auto relative">
       <div className="flex flex-col items-center bg-transparent">
-        <h2 className="text-5xl text-red-900 mb-2">Principais Projetos</h2>
+        <h2 className="text-2xl md:text-5xl text-red-900 mb-2">
+          Principais Projetos
+        </h2>
         <Swiper
           slidesPerView={1}
           cssMode={true}
@@ -150,7 +152,7 @@ const Projects = () => {
                 alt={projects.alt}
               />
               <div className="absolute flex flex-col w-3/5 gap-3">
-                <h5 className="text-3xl flex justify-center">
+                <h5 className="text-base md:text-2xl flex justify-center">
                   {projects.projectsName}
                 </h5>
                 <p className="text-lg leading-none">{projects.description}</p>
