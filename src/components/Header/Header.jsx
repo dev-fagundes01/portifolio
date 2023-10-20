@@ -54,7 +54,7 @@ function Header() {
           </li>
         </ul>
       </Nav>
-      <h1 className="text-2xl mt-2.5">
+      <h1 className="text-2xl md:mt-2.5">
         <span className="text-rose-900">Porti</span>fólio
       </h1>
     </header>

@@ -8,28 +8,40 @@ const Footer = () => {
   return (
     <div className="flex flex-row gap-2 justify-start fixed bottom-2">
       <a
-        className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-8 w-8"
+        className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
         href="https://www.linkedin.com/in/diego-fagundes-da-silva-694ab71b3/"
         target="_blank"
         rel="noreferrer"
       >
-        <img className="rounded-full h-5" src={Linkedin} alt="img-linkedin" />
+        <img
+          className="rounded-full h-3 md:h-5"
+          src={Linkedin}
+          alt="img-linkedin"
+        />
       </a>
       <a
-        className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-8 w-8"
+        className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
         href="https://github.com/DiegoSilva1919"
         target="_blank"
         rel="noreferrer"
       >
-        <img className="rounded-full h-5" src={GitHub} alt="img-github" />
+        <img
+          className="rounded-full h-3 md:h-5"
+          src={GitHub}
+          alt="img-github"
+        />
       </a>
       <a
-        className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-8 w-8"
+        className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
         href="https://wa.me/qr/EBYVIZJRG3FPF1"
         target="_blank"
         rel="noreferrer"
       >
-        <img className="rounded-full h-5" src={Whatsapp} alt="img-whatsapp" />
+        <img
+          className="rounded-full h-3 md:h-5"
+          src={Whatsapp}
+          alt="img-whatsapp"
+        />
       </a>
     </div>
   )

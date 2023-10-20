@@ -102,13 +102,13 @@ const Projects = () => {
                 alt={projects.alt}
               />
               <div className="absolute flex flex-col w-3/5 gap-3">
-                <h5 className="text-3xl">{projects.projectsName}</h5>
-                <p className="text-lg leading-none">{projects.description}</p>
-                <p className="text-lg leading-none">{projects.technologies}</p>
+                <h5 className="text-lg">{projects.projectsName}</h5>
+                <p className="text-sm leading-none">{projects.description}</p>
+                <p className="text-sm leading-none">{projects.technologies}</p>
                 <div className="flex items-center justify-center gap-1 flex-row">
                   <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
-                      className="text-sm"
+                      className="text-xs"
                       target="_blank"
                       href={projects.links1}
                       rel="noreferrer"
@@ -118,7 +118,7 @@ const Projects = () => {
                   </button>
                   <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
-                      className="text-sm"
+                      className="text-xs"
                       target="_blank"
                       href={projects.links2}
                       rel="noreferrer"
@@ -152,7 +152,7 @@ const Projects = () => {
                 alt={projects.alt}
               />
               <div className="absolute flex flex-col w-3/5 gap-3">
-                <h5 className="text-base md:text-2xl flex justify-center">
+                <h5 className="md:text-2xl flex justify-center">
                   {projects.projectsName}
                 </h5>
                 <p className="text-lg leading-none">{projects.description}</p>
