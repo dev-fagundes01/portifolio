@@ -1,10 +1,18 @@
+import { motion } from 'framer-motion'
+
 import Dowload from './../../src/assets/download.png'
 import Foto from './../../src/assets/foto.png'
 
 function AboutMe() {
   return (
-    <section className="grid place-items-center items-center">
-      <div className="flex flex-col md:flex-row items-center">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="grid place-items-center items-center"
+    >
+      <div className="flex flex-col md:flex-row md:ml-5 items-center">
         <img
           className="h-28 md:h-56 rounded-default border-4 p-2 border-red-600 border-solid "
           src={Foto}
@@ -36,7 +44,7 @@ function AboutMe() {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 export default AboutMe

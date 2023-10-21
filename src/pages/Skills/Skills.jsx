@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unknown-property */
+import { motion } from 'framer-motion'
+
 import Bootstrap from '../../assets/bootstrap_.svg'
 import CSS from '../../assets/css.png'
 import Express from '../../assets/express-original.svg'
@@ -167,7 +169,13 @@ const infoSkills = [
 
 function Habilidades() {
   return (
-    <section className="grid items-center">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="grid items-center"
+    >
       <div className="flex flex-col items-center justify-center gap-2">
         <h2 className="text-rose-900 text-2xl md:text-5xl">Habilidades</h2>
         <ul className="flex justify-center w-3/5 gap-1 md:w-2/5 md:gap-5 flex-wrap">
@@ -184,7 +192,7 @@ function Habilidades() {
           ))}
           <div className="flex flex-col items-center">
             <span className="text-xs md:text-lg text-black hover:text-white">
-              TS
+              Em-Breve
             </span>
             <LiTS className="relative">
               <img
@@ -196,7 +204,7 @@ function Habilidades() {
           </div>
         </ul>
       </div>
-    </section>
+    </motion.section>
   )
 }
 export default Habilidades

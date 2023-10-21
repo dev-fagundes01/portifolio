@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom'
 
+import { motion } from 'framer-motion'
+
 import Background from './../../src/assets/background.png'
 
 function Home() {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
       className="grid place-items-center
     align-items-center min-h-full my-20"
     >
@@ -33,7 +39,7 @@ function Home() {
           />
         </Link>
       </div>
-    </section>
+    </motion.section>
   )
 }
 export default Home

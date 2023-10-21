@@ -1,5 +1,6 @@
 /* eslint-disable import-helpers/order-imports */
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { motion } from 'framer-motion'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -76,7 +77,13 @@ const infoProjects = [
 
 const Projects = () => {
   return (
-    <section className="h-auto relative">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="h-auto relative"
+    >
       <div className="flex flex-col items-center bg-transparent">
         <h2 className="text-2xl md:text-5xl text-red-900 mb-2">
           Principais Projetos
@@ -184,7 +191,7 @@ const Projects = () => {
           ))}
         </Swiper>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
