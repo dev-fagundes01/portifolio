@@ -27,11 +27,17 @@ export default {
         60: '60vh'
       },
       margin: {
+        3: '3%',
+        1: '1rem',
+        2: '2rem',
         30: '30rem',
         22: 'revert'
       },
       padding: {
         5: '5%'
+      },
+      gap: {
+        1: '1rem'
       },
       letterSpacing: {
         wide: '5px',
@@ -42,9 +48,9 @@ export default {
       },
       fontSize: {
         0: '0px',
+        sss: '0.35rem',
+        ss: '0.60rem',
         '11xl': '150px',
-        nx: '0.4rem',
-        xx: '0.6rem',
         '7xl': '5rem',
         '9xl': '7rem',
         '13xl': '13rem'
@@ -54,6 +60,12 @@ export default {
         half: '50%',
         small: '30px',
         large: '100px'
+      },
+      gridTemplateColumns: {
+        3: 'repeat(3, minmax(0, 4rem))'
+      },
+      gridTemplateRows: {
+        2: 'repeat(2, minmax(0, 1.5rem))'
       },
       keyframes: {
         shake: {
@@ -74,21 +86,7 @@ export default {
       },
       screens: {
         '3xl': '2180px',
-        '4xl': '3100px',
-        sm: '640px',
-        // => @media (min-width: 640px) { ... }
-
-        md: '768px',
-        // => @media (min-width: 768px) { ... }
-
-        lg: '1024px',
-        // => @media (min-width: 1024px) { ... }
-
-        xl: '1280px',
-        // => @media (min-width: 1280px) { ... }
-
-        '2xl': '1536px'
-        // => @media (min-width: 1536px) { ... }
+        '4xl': '3100px'
       }
     }
   },

@@ -12,7 +12,7 @@ function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
       className="grid place-items-center
-    align-items-center min-h-full my-20"
+    align-items-center my-20"
     >
       <div className="flex gap-8 flex-col md:flex-row my-0">
         <div

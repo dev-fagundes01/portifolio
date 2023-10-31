@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unknown-property */
+import { useState } from 'react'
+
 import { motion } from 'framer-motion'
 
 import Bootstrap from '../../assets/bootstrap_.svg'
@@ -6,6 +8,7 @@ import CSS from '../../assets/css.png'
 import Express from '../../assets/express-original.svg'
 import Git from '../../assets/git.png'
 import HTML from '../../assets/html.png'
+import Insomnia from '../../assets/insomnia_94603.png'
 import JS from '../../assets/js.png'
 import Json from '../../assets/json.png'
 import LogoFigma from '../../assets/LogoFigma.png'
@@ -16,158 +19,101 @@ import Sass from '../../assets/sass_icon.svg'
 import Styled from '../../assets/styled 1.svg'
 import Tailwind from '../../assets/tailwind.png'
 import TS from '../../assets/ts.png'
+import Vercel from '../../assets/vercel.jpeg'
+import Vite from '../../assets/vite.png'
 import Vscode from '../../assets/vscode.png'
 import Yarn from '../../assets/yarn.png'
 import { LiTS } from './style'
 
 const infoSkills = [
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={React}
-      />
-    ),
+    icon: React,
     skillsName: 'React'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Node}
-      />
-    ),
+    icon: Node,
     skillsName: 'Node'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Styled}
-      />
-    ),
+    icon: Styled,
     skillsName: 'Styled'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={JS}
-      />
-    ),
+    icon: JS,
     skillsName: 'JS'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={CSS}
-      />
-    ),
+    icon: CSS,
     skillsName: 'CSS'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={HTML}
-      />
-    ),
+    icon: HTML,
     skillsName: 'HTML'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Json}
-      />
-    ),
+    icon: Json,
     skillsName: 'Json'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Git}
-      />
-    ),
+    icon: Git,
     skillsName: 'Git'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Express}
-      />
-    ),
-    skillsName: 'EJS'
+    icon: Express,
+    skillsName: 'Express'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Bootstrap}
-      />
-    ),
-    skillsName: 'TWBS'
+    icon: Bootstrap,
+    skillsName: 'Bootstrap'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Sass}
-      />
-    ),
+    icon: Sass,
     skillsName: 'Sass'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Tailwind}
-      />
-    ),
+    icon: Tailwind,
     skillsName: 'TW'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={LogoFigma}
-      />
-    ),
+    icon: LogoFigma,
     skillsName: 'Figma'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Vscode}
-      />
-    ),
+    icon: Vscode,
     skillsName: 'Vscode'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Yarn}
-      />
-    ),
+    icon: Yarn,
     skillsName: 'Yarn'
   },
   {
-    icon: (
-      <img
-        className="rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-        src={Responsividade}
-      />
-    ),
-    skillsName: 'RWD'
+    icon: Responsividade,
+    skillsName: 'Responsividade'
+  },
+  {
+    icon: Vite,
+    skillsName: 'Vite'
+  },
+  {
+    icon: Vercel,
+    skillsName: 'Vercel'
+  },
+  {
+    icon: Insomnia,
+    skillsName: 'Insomnia'
   }
 ]
 
 function Habilidades() {
+  const [isVisible, setIsVisible] = useState()
+
+  const skillVisibilityToggle = (info) => {
+    if (isVisible === info) {
+      setIsVisible(null)
+    } else {
+      setIsVisible(info)
+    }
+  }
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -178,31 +124,42 @@ function Habilidades() {
     >
       <div className="flex flex-col items-center justify-center gap-2">
         <h2 className="text-rose-900 text-2xl md:text-5xl">Habilidades</h2>
-        <ul className="flex justify-center w-3/5 gap-1 md:w-2/5 md:gap-5 flex-wrap">
+        <ul className="flex justify-center w-3/5 gap-1 md:w-2/5 md:gap-2 flex-wrap">
           {infoSkills.map((info) => (
             <li
-              className="flex flex-col items-center md:w-14"
+              className="flex flex-col items-center h-12 md:h-20 md:w-14 md:mx-1 "
               key={info.skillsName}
             >
-              <span className="text-black hover:text-white hover:flex hover:justify-center text-xs md:text-lg">
+              <img
+                onClick={() => skillVisibilityToggle(info)}
+                className="cursor-pointer rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
+                alt={info.skillsName}
+                src={info.icon}
+              />
+              <span
+                className={
+                  isVisible === info
+                    ? 'opacity-100 justify-center text-xs md:text-lg duration-1000'
+                    : 'opacity-20 text-sss duration-1000'
+                }
+              >
                 {info.skillsName}
               </span>
-              {info.icon}
             </li>
           ))}
-          <div className="flex flex-col items-center">
-            <span className="text-xs md:text-lg text-black hover:text-white">
-              Em-Breve
-            </span>
-            <LiTS className="relative">
-              <img
-                className="w-8 h-8 md:w-14 md:h-14 rounded-small bg-slate-500"
-                src={TS}
-              />
-              <div className="w-0 md:w-14" />
-            </LiTS>
-          </div>
         </ul>
+        <div>
+          <h3>Em Breve</h3>
+          <LiTS className="relative flex flex-col items-center">
+            <img
+              onClick={skillVisibilityToggle}
+              className="w-8 h-8 md:w-14 md:h-14 rounded-small bg-slate-500"
+              alt="TypeScript"
+              src={TS}
+            />
+            <div className="w-8 md:w-14" />
+          </LiTS>
+        </div>
       </div>
     </motion.section>
   )

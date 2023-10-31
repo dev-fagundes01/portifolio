@@ -113,7 +113,7 @@ const Projects = () => {
                 <p className="text-sm leading-none">{projects.description}</p>
                 <p className="text-sm leading-none">{projects.technologies}</p>
                 <div className="flex items-center justify-center gap-1 flex-row">
-                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
                       className="text-xs"
                       target="_blank"
@@ -123,7 +123,7 @@ const Projects = () => {
                       Projeto
                     </a>
                   </button>
-                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
                       className="text-xs"
                       target="_blank"
@@ -165,7 +165,7 @@ const Projects = () => {
                 <p className="text-lg leading-none">{projects.description}</p>
                 <p className="text-lg leading-none">{projects.technologies}</p>
                 <div className="flex items-center justify-center gap-1 flex-row">
-                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
                       className="text-sm"
                       target="_blank"
@@ -175,7 +175,7 @@ const Projects = () => {
                       Projeto
                     </a>
                   </button>
-                  <button className="flex items-center justify-center bg-blue-700 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                     <a
                       className="text-sm"
                       target="_blank"
