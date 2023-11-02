@@ -63,9 +63,9 @@ function Header({ theme, themeToggler }) {
             <BiSun className="h-3 md:h-5" />
           )}
         </button>
-        <h1 className="text-base md:text-2xl md:mt-2.5">
+        <h2 className="text-base md:text-2xl md:mt-2.5">
           <span className="text-rose-900">Porti</span>fólio
-        </h1>
+        </h2>
       </div>
     </header>
   )

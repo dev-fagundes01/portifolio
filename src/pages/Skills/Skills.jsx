@@ -150,15 +150,17 @@ function Habilidades() {
         </ul>
         <div>
           <h3>Em Breve</h3>
-          <LiTS className="relative flex flex-col items-center">
-            <img
-              onClick={skillVisibilityToggle}
-              className="w-8 h-8 md:w-14 md:h-14 rounded-small bg-slate-500"
-              alt="TypeScript"
-              src={TS}
-            />
-            <div className="w-8 md:w-14" />
-          </LiTS>
+          <ul className="grid place-items-center">
+            <LiTS className="relative flex flex-col items-center">
+              <img
+                onClick={skillVisibilityToggle}
+                className="w-8 h-8 md:w-14 md:h-14 rounded-small bg-slate-500"
+                alt="TypeScript"
+                src={TS}
+              />
+              <div className="w-8 md:w-14" />
+            </LiTS>
+          </ul>
         </div>
       </div>
     </motion.section>
