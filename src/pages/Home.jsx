@@ -1,39 +1,45 @@
 import { Link } from 'react-router-dom'
 
+import { motion } from 'framer-motion'
+
 import Background from './../../src/assets/background.png'
 
 function Home() {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
       className="grid place-items-center
     align-items-center min-h-full my-20"
     >
-      <div className="flex gap-8 flex-row my-0">
+      <div className="flex gap-8 flex-col md:flex-row my-0">
         <div
           className="flex
     align-items-center justify-center flex-col"
         >
-          <h3 className="text-4xl">Oi!, eu sou</h3>
+          <h3 className="text-base md:text-4xl">Oi!, eu sou</h3>
 
           <Link to="/sobre">
-            <h2 className="leading-normal text-6xl widest">
+            <h2 className="leading-normal text-2xl md:text-6xl widest">
               Diego <span className="text-rose-900">Fagundes</span>
             </h2>
           </Link>
 
-          <h2 className="leading-normal text-4xl w-auto">
+          <h2 className="leading-normal text-base md:text-4xl w-auto">
             Programador Front-End
           </h2>
         </div>
         <Link to="/projetos">
           <img
-            className="h-64 animate-shake hover:animate-shakeHover"
+            className="h-28 md:h-64 animate-shake hover:animate-shakeHover"
             src={Background}
             alt="img-background"
           />
         </Link>
       </div>
-    </section>
+    </motion.section>
   )
 }
 export default Home

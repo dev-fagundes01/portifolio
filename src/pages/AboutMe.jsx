@@ -1,19 +1,27 @@
+import { motion } from 'framer-motion'
+
 import Dowload from './../../src/assets/download.png'
 import Foto from './../../src/assets/foto.png'
 
 function AboutMe() {
   return (
-    <section className="grid place-items-center items-center">
-      <div className="flex flex-row items-center">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="grid place-items-center items-center"
+    >
+      <div className="flex flex-col md:flex-row md:ml-5 items-center">
         <img
-          className="h-56 rounded-default border-4 p-2 border-red-600 border-solid "
+          className="h-28 md:h-56 rounded-default border-4 p-2 border-red-600 border-solid "
           src={Foto}
           alt="imf-foto"
         />
-        <div className="flex flex-col pt-10 ml-10 w-50 gap-2">
-          <h2 className="text-5xl text-red-600">Sobre mim</h2>
-          <h3 className="text-3xl">Escada, Pernambuco</h3>
-          <p className="my-1 text-xl w-4/5">
+        <div className="flex flex-col ml-10 w-4/5 md:pt-10 md:gap-2">
+          <h2 className="text-xl md:text-5xl text-red-600">Sobre mim</h2>
+          <h3 className="text-lg md:text-3xl">Escada, Pernambuco</h3>
+          <p className="my-1 text-sm md:text-xl md:w-4/5">
             Sou Desenvolvedor Front-End, com conhecimento em HTML, CSS,
             Javascript, React.js, Node.js e sempre estudando para ser
             Full-Stack. Com essas tecnologias já desenvolvi alguns projetos
@@ -22,17 +30,21 @@ function AboutMe() {
             meus conhecimentos.
           </p>
           <a
-            className="flex items-center hover:text-rose-900 duration-700 text-xl"
+            className="flex items-center hover:text-rose-900 duration-700 text-sm md:text-xl"
             href="https://1drv.ms/f/s!Alq6MThgER89hXQKuzfY350PiVOA?e=6aK1Tj"
             target="_blank"
             rel="noreferrer"
           >
-            <img className="rounded-full h-5" src={Dowload} alt="img-dowload" />
+            <img
+              className="rounded-full h-4 md:h-5"
+              src={Dowload}
+              alt="img-dowload"
+            />
             Currículo
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 export default AboutMe

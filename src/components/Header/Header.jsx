@@ -10,8 +10,11 @@ function Header() {
 
   return (
     <header className="h-32 flex w-full justify-between">
+      <h1 className="text-2xl md:mt-2.5">
+        <span className="text-rose-900">Porti</span>fólio
+      </h1>
       <Nav isVisible={menuIsVisible}>
-        <div className="flex flex-col md:hidden">
+        <div className="flex flex-col items-end md:hidden">
           <HiMenuAlt4 className="menu" onClick={() => setMenuIsVisible(true)} />
           <MenuMobile
             menuIsVisible={menuIsVisible}
@@ -54,9 +57,6 @@ function Header() {
           </li>
         </ul>
       </Nav>
-      <h1 className="text-2xl mt-2.5">
-        <span className="text-rose-900">Porti</span>fólio
-      </h1>
     </header>
   )
 }
