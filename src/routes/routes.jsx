@@ -18,7 +18,7 @@ function Router() {
       <Routes location={Location} key={Location.pathname}>
         <Route element={<DefaultLayout theme={theme} setTheme={setTheme} />}>
           <Route path="/" element={<Home theme={theme} />} />
-          <Route path="/sobre" element={<AboutMe />} theme={theme} />
+          <Route path="/sobre" element={<AboutMe theme={theme} />} />
           <Route path="/projetos" element={<Projects theme={theme} />} />
           <Route path="/habilidades" element={<Skills theme={theme} />} />
         </Route>

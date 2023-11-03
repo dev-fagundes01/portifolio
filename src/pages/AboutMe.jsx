@@ -15,7 +15,7 @@ function AboutMe() {
       transition={{ duration: 1 }}
       className="grid place-items-center items-center"
     >
-      <div className="flex flex-col md:flex-row md:ml-5 items-center">
+      <div className="flex flex-col items-center mt-3 md:mt-0 md:flex-row md:ml-5">
         <img
           className="h-28 md:h-64 rounded-default border-4 p-2 border-red-600 border-solid "
           src={Foto}
@@ -43,7 +43,7 @@ function AboutMe() {
             <h3 className="text-lg md:text-3xl text-red-400">
               Interesses e Hobbies:
             </h3>
-            <div className="grid grid-cols-3 grid-rows-2 place-items-center md:gap-1 md:mt-1 md:mb-2">
+            <div className="grid grid-cols-3 grid-rows-2 place-items-center md:gap-1 md:mt-0.9 md:mb-1.1">
               <img
                 className="h-8 md:h-14 rounded-full"
                 src={Sports}
@@ -71,7 +71,7 @@ function AboutMe() {
             rel="noreferrer"
           >
             <img
-              className="rounded-full mx-3 h-3 md:h-8"
+              className="rounded-full mr-1 h-3 md:h-8"
               src={Dowload}
               alt="img-dowload"
             />
