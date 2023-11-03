@@ -43,7 +43,7 @@ function AboutMe() {
             <h3 className="text-lg md:text-3xl text-red-400">
               Interesses e Hobbies:
             </h3>
-            <div className="grid grid-cols-3 grid-rows-2 place-items-center md:gap-1 md:mt-0.9 md:mb-2">
+            <div className="grid grid-cols-3 grid-rows-2 place-items-center md:gap-1 md:mt-0.9 md:mb-1.1">
               <img
                 className="h-8 md:h-14 rounded-full"
                 src={Sports}

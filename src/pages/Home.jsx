@@ -20,8 +20,8 @@ function Home() {
     align-items-center justify-center flex-col"
         >
           <Link to="/sobre">
-            <h1 className="leading-normal text-2xl md:text-5xl ml-1 widest">
-              <span className="text-base md:text-4xl md:ml-3">Oi!, eu sou</span>
+            <h1 className="leading-normal text-2xl md:text-5xl ml-1 gm:ml-0 widest">
+              <span className="text-base md:text-4xl">Oi!, eu sou</span>
               <br />
               Diego <span className="text-rose-900">Fagundes</span>
               <br />

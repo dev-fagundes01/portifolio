@@ -29,6 +29,7 @@ export default {
       margin: {
         1: '1%',
         0.9: '0.9rem',
+        1.1: '1.1rem',
         2: '2rem',
         3: '-3rem',
         30: '30rem',
@@ -86,6 +87,7 @@ export default {
         girar: 'girar 1s linear infinite'
       },
       screens: {
+        gm: '920px',
         '3xl': '2180px',
         '4xl': '3100px'
       }
