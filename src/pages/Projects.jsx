@@ -150,7 +150,7 @@ const Projects = () => {
         >
           {infoProjects.map((projects) => (
             <SwiperSlide
-              className="relative text-center bg-transparent flex justify-center items-center flex-col mx-2"
+              className="relative text-center bg-transparent flex justify-center items-center flex-col mx-0.5"
               key={projects.projectsName}
             >
               <img

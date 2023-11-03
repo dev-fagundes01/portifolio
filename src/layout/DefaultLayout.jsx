@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 
 import { ThemeProvider } from 'styled-components'
@@ -8,9 +7,7 @@ import Header from '../components/Header/Header'
 import { ThemeGlobal } from '../styles/globalStyles'
 import { darkTheme, LightTheme } from '../styles/theme'
 
-function DefaultLayout() {
-  const [theme, setTheme] = useState('dark')
-
+function DefaultLayout({ theme, setTheme }) {
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }

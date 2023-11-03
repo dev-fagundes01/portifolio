@@ -71,7 +71,7 @@ function AboutMe() {
             rel="noreferrer"
           >
             <img
-              className="rounded-full m-3 h-3 md:h-8"
+              className="rounded-full mx-3 h-3 md:h-8"
               src={Dowload}
               alt="img-dowload"
             />
