@@ -27,9 +27,10 @@ export default {
         60: '60vh'
       },
       margin: {
-        3: '3%',
-        1: '1rem',
+        1: '1%',
+        0.9: '0.9rem',
         2: '2rem',
+        3: '-3rem',
         30: '30rem',
         22: 'revert'
       },
