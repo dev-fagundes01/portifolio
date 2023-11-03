@@ -1,15 +1,26 @@
 import { Outlet } from 'react-router-dom'
 
-import Footer from '../components/Footer'
-import Header from '../components/Header/Header'
+import { ThemeProvider } from 'styled-components'
 
-function DefaultLayout() {
+import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header'
+import { ThemeGlobal } from '../styles/globalStyles'
+import { darkTheme, LightTheme } from '../styles/theme'
+
+function DefaultLayout({ theme, setTheme }) {
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  }
+  console.log(themeToggler)
+
   return (
-    <>
-      <Header></Header>
-      <Outlet></Outlet>
-      <Footer></Footer>
-    </>
+    <ThemeProvider theme={theme === 'light' ? LightTheme : darkTheme}>
+      <ThemeGlobal>
+        <Header theme={theme} themeToggler={themeToggler} />
+        <Outlet />
+        <Footer />
+      </ThemeGlobal>
+    </ThemeProvider>
   )
 }
 export default DefaultLayout
