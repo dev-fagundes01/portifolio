@@ -1,79 +1,80 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable import-helpers/order-imports */
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { motion } from 'framer-motion'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import DevMovies from '../../src/img/Captura de tela movies.png'
-import Burger from '../../src/img/Captura de tela burger.png'
-import Conversor from '../../src/img/Captura de tela conversor.png'
-import iMovi from '../../src/img/Captura de tela iMovi.png'
-import StorePS from '../../src/img/Captura de tela Playstation-Store.png'
+import DevMovies from "../../src/img/Captura de tela movies.png";
+import Burger from "../../src/img/Captura de tela burger.png";
+import Conversor from "../../src/img/Captura de tela conversor.png";
+import iMovi from "../../src/img/Captura de tela iMovi.png";
+import StorePS from "../../src/img/Captura de tela Playstation-Store.png";
 
 // eslint-disable-next-line import-helpers/order-imports
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules'
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 const infoProjects = [
   {
     projectsImage: DevMovies,
-    alt: 'img-devmovies',
-    projectsName: 'DevMovies',
+    alt: "img-devmovies",
+    projectsName: "DevMovies",
     description:
-      'Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares,que vão estrear e muito mais.',
+      "Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares,que vão estrear e muito mais.",
     technologies:
-      'Tecnologias usadas no projeto: React.js, Javascript, CSS, HTML e o Axios para consumir uma api publica.',
-    links1: 'https//dev-movies-df.netlify.app',
-    links2: 'https//github.com/DiegoSilva1919/dev-movies'
+      "Tecnologias usadas no projeto: React.js, Javascript, CSS, HTML e o Axios para consumir uma api publica.",
+    links1: "https://dev-movies-df.netlify.app",
+    links2: "https://github.com/DiegoSilva1919/dev-movies",
   },
   {
     projectsImage: Burger,
-    alt: 'img-hamburgueria',
-    projectsName: 'Hamburgueria',
+    alt: "img-hamburgueria",
+    projectsName: "Hamburgueria",
     description:
-      'Você fara o seu pedido e iremos colocar em uma outra pagina onde você poderá ver e excluir se quiser.',
+      "Você fara o seu pedido e iremos colocar em uma outra pagina onde você poderá ver e excluir se quiser.",
     technologies:
-      'Tecnologias usadas no projeto: React.js, Node.js, JavaScript, CSS e HTML',
-    links1: '//hamburgueria-df.netlify.app',
-    links2: '//github.com/DiegoSilva1919/hamburgueria'
+      "Tecnologias usadas no projeto: React.js, Node.js, JavaScript, CSS e HTML",
+    links1: "https://hamburgueria-df.netlify.app",
+    links2: "https://github.com/DiegoSilva1919/hamburgueria",
   },
   {
     projectsImage: Conversor,
-    alt: 'img-conversor',
-    projectsName: 'Conversor',
+    alt: "img-conversor",
+    projectsName: "Conversor",
     description:
-      'Nele podera converter o Real em Dolar Americano, Euro e Bitcoin.',
-    technologies: 'Tecnologias usadas no projeto JavaScript, CSS, HTML.',
-    links1: 'https://conversor-df.netlify.app',
-    links2: 'https://github.com/DiegoSilva1919/conversor'
+      "Nele podera converter o Real em Dolar Americano, Euro e Bitcoin.",
+    technologies: "Tecnologias usadas no projeto JavaScript, CSS, HTML.",
+    links1: "https://conversor-df.netlify.app",
+    links2: "https://github.com/DiegoSilva1919/conversor",
   },
   {
     projectsImage: iMovi,
-    alt: 'img-iMovi',
-    projectsName: 'iMovi',
+    alt: "img-iMovi",
+    projectsName: "iMovi",
     description:
-      'Você vai ver um layout moderno de uma empresa do ramo de construção com informações da empresa, design de projetos e outras coisas.',
-    technologies: 'Esse projeto foi feito com o framework Bootstrap.',
-    links1: 'https://i-movi-xi.vercel.app/',
-    links2: 'https://github.com/DiegoSilva1919/iMovi'
+      "Você vai ver um layout moderno de uma empresa do ramo de construção com informações da empresa, design de projetos e outras coisas.",
+    technologies: "Esse projeto foi feito com o framework Bootstrap.",
+    links1: "https://i-movi-xi.vercel.app/",
+    links2: "https://github.com/DiegoSilva1919/iMovi",
   },
   {
     projectsImage: StorePS,
-    alt: 'img-Playstation-Store',
-    projectsName: 'Store-PS',
+    alt: "img-Playstation-Store",
+    projectsName: "Store-PS",
     description:
-      'Um site da Playstation-Store com layout diferente e responsivo.',
-    technologies: 'Tecnologias usadas no projeto JavaScript, CSS e HTML.',
-    links1: 'https://diegosilva1919.github.io/playstation-store/',
-    links2: 'https://github.com/DiegoSilva1919/playstation-store'
+      "Um site da Playstation-Store com layout diferente e responsivo.",
+    technologies: "Tecnologias usadas no projeto JavaScript, CSS e HTML.",
+    links1: "https://diegosilva1919.github.io/playstation-store/",
+    links2: "https://github.com/DiegoSilva1919/playstation-store",
   },
   {
-    projectsName: 'EmBreve',
-    description: 'Projeto feito em React.js.',
-    technologies: 'Tecnologias usadas no projeto TipeScript, CSS e HTML.'
-  }
-]
+    projectsName: "EmBreve",
+    description: "Projeto feito em React.js.",
+    technologies: "Tecnologias usadas no projeto TipeScript, CSS e HTML.",
+  },
+];
 
 const Projects = () => {
   return (
@@ -192,7 +193,7 @@ const Projects = () => {
         </Swiper>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
