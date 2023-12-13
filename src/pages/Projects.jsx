@@ -1,20 +1,19 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable import-helpers/order-imports */
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useState } from "react";
+
 import { motion } from "framer-motion";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import DevMovies from "../../src/img/Captura de tela movies.png";
 import Burger from "../../src/img/Captura de tela burger.png";
 import Conversor from "../../src/img/Captura de tela conversor.png";
 import iMovi from "../../src/img/Captura de tela iMovi.png";
+import DevMovies from "../../src/img/Captura de tela movies.png";
 import StorePS from "../../src/img/Captura de tela Playstation-Store.png";
-
-// eslint-disable-next-line import-helpers/order-imports
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 const infoProjects = [
   {
@@ -77,6 +76,15 @@ const infoProjects = [
 ];
 
 const Projects = () => {
+  const [isMouseOver, setIsMouseOver] = useState(true);
+
+  const handleMouseOver = (projectsName) => {
+    setIsMouseOver((prev) => ({ ...prev, [projectsName]: false }));
+  };
+
+  const handleMouseOut = (projectsName) => {
+    setIsMouseOver((prev) => ({ ...prev, [projectsName]: true }));
+  };
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -105,11 +113,23 @@ const Projects = () => {
               key={projects.projectsName}
             >
               <img
+                onMouseOver={() => handleMouseOver(projects.projectsName)}
+                onMouseOut={() => handleMouseOut(projects.projectsName)}
+                style={{
+                  opacity: isMouseOver[projects.projectsName] ? "0.20" : "1",
+                }}
                 className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
                 src={projects.projectsImage}
                 alt={projects.alt}
               />
-              <div className="absolute flex flex-col w-3/5 gap-3">
+              <div
+                onMouseOver={() => handleMouseOver(projects.projectsName)}
+                onMouseOut={() => handleMouseOut(projects.projectsName)}
+                style={{
+                  opacity: isMouseOver[projects.projectsName] ? "1" : "0",
+                }}
+                className="absolute flex flex-col w-3/5 gap-3"
+              >
                 <h5 className="text-lg">{projects.projectsName}</h5>
                 <p className="text-sm leading-none">{projects.description}</p>
                 <p className="text-sm leading-none">{projects.technologies}</p>
@@ -155,11 +175,23 @@ const Projects = () => {
               key={projects.projectsName}
             >
               <img
+                onMouseOver={() => handleMouseOver(projects.projectsName)}
+                onMouseOut={() => handleMouseOut(projects.projectsName)}
+                style={{
+                  opacity: isMouseOver[projects.projectsName] ? "0.20" : "1",
+                }}
                 className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
                 src={projects.projectsImage}
                 alt={projects.alt}
               />
-              <div className="absolute flex flex-col w-3/5 gap-3">
+              <div
+                onMouseOver={() => handleMouseOver(projects.projectsName)}
+                onMouseOut={() => handleMouseOut(projects.projectsName)}
+                style={{
+                  opacity: isMouseOver[projects.projectsName] ? "1" : "0",
+                }}
+                className="absolute flex flex-col w-3/5 gap-3"
+              >
                 <h5 className="md:text-2xl flex justify-center">
                   {projects.projectsName}
                 </h5>
