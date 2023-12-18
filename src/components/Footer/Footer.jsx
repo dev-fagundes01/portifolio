@@ -1,8 +1,9 @@
-import React from 'react'
+/* eslint-disable prettier/prettier */
+import React from "react";
 
-import GitHub from './../../assets/github.png'
-import Linkedin from './../../assets/linkedin.png'
-import Whatsapp from './../../assets/WhatsApp-Carousel.jpg'
+import GitHub from "./../../assets/github.png";
+import Linkedin from "./../../assets/linkedin.png";
+import Whatsapp from "./../../assets/WhatsApp-Carousel.jpg";
 
 const Footer = () => {
   return (
@@ -21,7 +22,7 @@ const Footer = () => {
       </a>
       <a
         className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
-        href="https://github.com/DiegoSilva1919"
+        href="https://github.com/dfagundes2001"
         target="_blank"
         rel="noreferrer"
       >
@@ -44,7 +45,7 @@ const Footer = () => {
         />
       </a>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
