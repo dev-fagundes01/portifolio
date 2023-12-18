@@ -65,7 +65,7 @@ const infoProjects = [
     description:
       "Um site da Playstation-Store com layout diferente e responsivo.",
     technologies: "Tecnologias usadas no projeto JavaScript, CSS e HTML.",
-    links1: "https://diegosilva1919.github.io/playstation-store/",
+    links1: "https://dfagundes2001.github.io/playstation-store/",
     links2: "https://github.com/DiegoSilva1919/playstation-store",
   },
   {
@@ -197,28 +197,28 @@ const Projects = () => {
                 </h5>
                 <p className="text-lg leading-none">{projects.description}</p>
                 <p className="text-lg leading-none">{projects.technologies}</p>
-                <div className="flex items-center justify-center gap-1 flex-row">
-                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                    <a
-                      className="text-sm"
-                      target="_blank"
-                      href={projects.links1}
-                      rel="noreferrer"
-                    >
-                      Projeto
-                    </a>
-                  </button>
-                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                    <a
-                      className="text-sm"
-                      target="_blank"
-                      href={projects.links2}
-                      rel="noreferrer"
-                    >
-                      Repositório
-                    </a>
-                  </button>
-                </div>
+              </div>
+              <div className="absolute bottom-9 flex items-center justify-center gap-1 flex-row">
+                <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                  <a
+                    className="text-sm"
+                    target="_blank"
+                    href={projects.links1}
+                    rel="noreferrer"
+                  >
+                    Projeto
+                  </a>
+                </button>
+                <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                  <a
+                    className="text-sm"
+                    target="_blank"
+                    href={projects.links2}
+                    rel="noreferrer"
+                  >
+                    Repositório
+                  </a>
+                </button>
               </div>
             </SwiperSlide>
           ))}
