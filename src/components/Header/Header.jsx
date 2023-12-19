@@ -12,10 +12,8 @@ function Header({ theme, themeToggler }) {
 
   return (
     <header className="h-32 flex w-full justify-between p-2 md:p-3">
-      <div className="flex items-start">
-        <h2 className="text-rose-400 text-base md:text-2xl md:mt-2.5">
-          Portfólio
-        </h2>
+      <div className="flex items-start pt-1 md:pt-0">
+        <h2 className="text-rose-400 text-base md:text-2xl">Portfólio</h2>
         <button onClick={themeToggler}>
           {theme === "light" ? (
             <BiMoon className="h-3 md:h-5" />
@@ -26,7 +24,10 @@ function Header({ theme, themeToggler }) {
       </div>
       <Nav isVisible={menuIsVisible}>
         <div className="flex flex-col items-end mr-4 md:hidden">
-          <HiMenuAlt4 className="menu" onClick={() => setMenuIsVisible(true)} />
+          <HiMenuAlt4
+            className="menu text-2xl"
+            onClick={() => setMenuIsVisible(true)}
+          />
           <MenuMobile
             menuIsVisible={menuIsVisible}
             setMenuIsVisible={setMenuIsVisible}

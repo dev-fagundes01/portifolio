@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   cursor: pointer;
@@ -29,4 +29,4 @@ export const Container = styled.div`
         pointer-events: all;
       `}
   }
-`
+`;

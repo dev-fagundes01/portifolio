@@ -1,12 +1,15 @@
-import { AiOutlineClose } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-import { Container } from './style'
+import { Container } from "./style";
 
 const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
   return (
     <Container isVisible={menuIsVisible}>
-      <AiOutlineClose onClick={() => setMenuIsVisible(false)} />
+      <AiOutlineClose
+        className="text-2xl"
+        onClick={() => setMenuIsVisible(false)}
+      />
       <ul className="cursor-pointer flex flex-col items-center 2xl:hidden">
         <li className="leading-3 h-6">
           <Link
@@ -42,7 +45,7 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
         </li>
       </ul>
     </Container>
-  )
-}
+  );
+};
 
-export default MenuMobile
+export default MenuMobile;
