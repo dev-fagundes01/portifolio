@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-import Dowload from './../../src/assets/download.png'
-import Foto from './../../src/assets/foto.png'
-import Livros from './../../src/assets/livros.png'
-import Sports from './../../src/assets/sports.png'
-import Xadrez from './../../src/assets/xadrez.jpeg'
+import Dowload from "./../../src/assets/download.png";
+import Foto from "./../../src/assets/foto.png";
+import Livros from "./../../src/assets/livros.png";
+import Sports from "./../../src/assets/sports.png";
+import Xadrez from "./../../src/assets/xadrez.jpeg";
 
 function AboutMe() {
   return (
@@ -27,7 +27,7 @@ function AboutMe() {
           <p className="text-sm md:mt-1 md:text-xl md:w-4/5">
             Sou Desenvolvedor Front-End, com conhecimento em HTML, CSS,
             Javascript, React.js, Node.js e sempre estudando para ser Full-Stack
-            na{' '}
+            na{" "}
             <b>
               <a href="https://www.linkedin.com/school/dev-club-devs/mycompany/">
                 DevClub
@@ -66,7 +66,7 @@ function AboutMe() {
           </div>
           <a
             className="flex items-center hover:text-rose-900 duration-700 text-ss md:text-xl"
-            href="https://1drv.ms/f/s!Alq6MThgER89hXQKuzfY350PiVOA?e=6aK1Tj"
+            href="https://1drv.ms/b/s!Alq6MThgER89kKBpQD3JbxtO962XoQ?e=yBgbaO"
             target="_blank"
             rel="noreferrer"
           >
@@ -80,6 +80,6 @@ function AboutMe() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }
-export default AboutMe
+export default AboutMe;
