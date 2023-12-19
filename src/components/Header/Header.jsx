@@ -25,7 +25,7 @@ function Header({ theme, themeToggler }) {
         </button>
       </div>
       <Nav isVisible={menuIsVisible}>
-        <div className="flex flex-col items-end mr-1.5 md:hidden">
+        <div className="flex flex-col items-end mr-4 md:hidden">
           <HiMenuAlt4 className="menu" onClick={() => setMenuIsVisible(true)} />
           <MenuMobile
             menuIsVisible={menuIsVisible}
