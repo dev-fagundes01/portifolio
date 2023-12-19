@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
   cursor: pointer;
@@ -12,4 +12,4 @@ export const Nav = styled.nav`
         transition: 2s;
       }
     `}
-`
+`;
