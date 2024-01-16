@@ -1,7 +1,7 @@
+/* eslint-disable prettier/prettier */
 import { motion } from "framer-motion";
 
 import Dowload from "./../../src/assets/download.png";
-import Foto from "./../../src/assets/foto.png";
 import Livros from "./../../src/assets/livros.png";
 import Sports from "./../../src/assets/sports.png";
 import Xadrez from "./../../src/assets/xadrez.jpeg";
@@ -18,7 +18,7 @@ function AboutMe() {
       <div className="flex flex-col items-center mt-3 md:mt-0 md:flex-row md:ml-5">
         <img
           className="h-28 md:h-64 rounded-default border-4 p-2 border-red-600 border-solid "
-          src={Foto}
+          src="https://github.com/dfagundes2001.png"
           alt="imf-foto"
         />
         <div className="flex flex-col ml-10 w-4/5 md:pt-10 md:gap-2">
