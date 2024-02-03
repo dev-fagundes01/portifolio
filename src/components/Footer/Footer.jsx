@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="w-screen block fixed bottom-2 p-2 md:p-3">
       <div className="flex flex-row gap-2 justify-start">
         <a
-          className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
+          className="bg-purple-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
           href="https://www.linkedin.com/in/diego-fagundes-da-silva-694ab71b3/"
           target="_blank"
           rel="noreferrer"
@@ -22,7 +22,7 @@ const Footer = () => {
           />
         </a>
         <a
-          className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
+          className="bg-purple-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
           href="https://github.com/dfagundes2001"
           target="_blank"
           rel="noreferrer"
@@ -34,7 +34,7 @@ const Footer = () => {
           />
         </a>
         <a
-          className="bg-rose-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
+          className="bg-purple-900 flex items-center justify-center rounded-full hover:scale-125 hover:duration-1000 h-4 w-4 md:h-8 md:w-8"
           href="https://wa.me/qr/EBYVIZJRG3FPF1"
           target="_blank"
           rel="noreferrer"

@@ -36,9 +36,10 @@ export default {
         30: "30rem",
         22: "revert",
       },
-      padding: {
-        5: "5%",
-      },
+      padding: { 5: "5%", },
+
+      top: { 28: "-28px" },
+
       gap: {
         1: "1rem",
       },

@@ -17,12 +17,12 @@ function AboutMe() {
     >
       <div className="flex flex-col items-center mt-3 md:mt-0 md:flex-row md:ml-5">
         <img
-          className="h-28 md:h-64 rounded-default border-4 p-2 border-red-600 border-solid "
+          className="h-28 md:h-64 rounded-default border-4 p-2 border-sky-300 border-solid "
           src="https://github.com/dfagundes2001.png"
           alt="imf-foto"
         />
-        <div className="flex flex-col ml-10 w-4/5 md:pt-10 md:gap-2">
-          <h2 className="text-xl md:text-5xl text-red-600">Sobre mim</h2>
+        <div className="flex flex-col ml-10 w-4/5 md:gap-2">
+          <h2 className="text-xl md:text-5xl text-sky-400">Sobre mim</h2>
           <h3 className="text-lg md:text-3xl">Escada, Pernambuco</h3>
           <p className="text-sm md:mt-1 md:text-xl md:w-4/5">
             Sou Desenvolvedor Front-End, com conhecimento em HTML, CSS,
@@ -40,7 +40,7 @@ function AboutMe() {
             conhecimentos.
           </p>
           <div>
-            <h3 className="text-lg md:text-3xl text-red-400">
+            <h3 className="text-lg md:text-3xl text-sky-400">
               Interesses e Hobbies:
             </h3>
             <div className="grid grid-cols-3 grid-rows-2 place-items-center md:gap-1 md:mt-0.9 md:mb-1.1">

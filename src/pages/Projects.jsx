@@ -23,7 +23,7 @@ const infoProjects = [
     description:
       "Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares,que vão estrear e muito mais.",
     technologies:
-      "Tecnologias usadas no projeto: React.js, Javascript, CSS, HTML e o Axios para consumir uma api publica.",
+      " React.js, Javascript, CSS, HTML e o Axios para consumir uma api publica.",
     links1: "https://dev-movies-df.netlify.app",
     links2: "https://github.com/DiegoSilva1919/dev-movies",
   },
@@ -33,8 +33,7 @@ const infoProjects = [
     projectsName: "Hamburgueria",
     description:
       "Você fara o seu pedido e iremos colocar em uma outra pagina onde você poderá ver e excluir se quiser.",
-    technologies:
-      "Tecnologias usadas no projeto: React.js, Node.js, JavaScript, CSS e HTML",
+    technologies: " React.js, Node.js, JavaScript, CSS e HTML",
     links1: "https://hamburgueria-df.netlify.app",
     links2: "https://github.com/DiegoSilva1919/hamburgueria",
   },
@@ -44,7 +43,7 @@ const infoProjects = [
     projectsName: "Conversor",
     description:
       "Nele podera converter o Real em Dolar Americano, Euro e Bitcoin.",
-    technologies: "Tecnologias usadas no projeto JavaScript, CSS, HTML.",
+    technologies: " JavaScript, CSS, HTML.",
     links1: "https://conversor-df.netlify.app",
     links2: "https://github.com/DiegoSilva1919/conversor",
   },
@@ -54,7 +53,7 @@ const infoProjects = [
     projectsName: "iMovi",
     description:
       "Você vai ver um layout moderno de uma empresa do ramo de construção com informações da empresa, design de projetos e outras coisas.",
-    technologies: "Esse projeto foi feito com o framework Bootstrap.",
+    technologies: " Framework Bootstrap.",
     links1: "https://i-movi-xi.vercel.app/",
     links2: "https://github.com/DiegoSilva1919/iMovi",
   },
@@ -64,14 +63,14 @@ const infoProjects = [
     projectsName: "Store-PS",
     description:
       "Um site da Playstation-Store com layout diferente e responsivo.",
-    technologies: "Tecnologias usadas no projeto JavaScript, CSS e HTML.",
+    technologies: " JavaScript, CSS e HTML.",
     links1: "https://dfagundes2001.github.io/playstation-store/",
     links2: "https://github.com/DiegoSilva1919/playstation-store",
   },
   {
     projectsName: "EmBreve",
     description: "Projeto feito em React.js.",
-    technologies: "Tecnologias usadas no projeto TipeScript, CSS e HTML.",
+    technologies: " TipeScript, CSS e HTML.",
   },
 ];
 
@@ -94,7 +93,7 @@ const Projects = () => {
       className="h-auto relative"
     >
       <div className="flex flex-col items-center bg-transparent">
-        <h2 className="text-2xl md:text-5xl text-red-900 mb-2.2">
+        <h2 className="text-2xl md:text-5xl text-sky-500 mb-2.2">
           Principais Projetos
         </h2>
         <Swiper
@@ -128,14 +127,19 @@ const Projects = () => {
                 style={{
                   opacity: isMouseOver[projects.projectsName] ? "1" : "0",
                 }}
-                className="absolute flex flex-col w-3/5 gap-3"
+                className="absolute top-16 flex flex-col w-3/5 gap-3"
               >
                 <h5 className="text-lg">{projects.projectsName}</h5>
                 <p className="text-sm leading-none">{projects.description}</p>
-                <p className="text-sm leading-none">{projects.technologies}</p>
+                <p className="text-sm leading-none">
+                  <span className="text-rose-400 ">
+                    Tecnologias usadas no projeto:
+                  </span>
+                  {projects.technologies}
+                </p>
               </div>
-              <div className="flex items-center justify-center gap-1 flex-row">
-                <button className="absolute bottom-9 flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+              <div className="absolute bottom-9 flex items-center justify-center gap-1 flex-row">
+                <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                   <a
                     className="text-xs"
                     target="_blank"
@@ -190,13 +194,18 @@ const Projects = () => {
                 style={{
                   opacity: isMouseOver[projects.projectsName] ? "1" : "0",
                 }}
-                className="absolute flex flex-col w-3/5 gap-3"
+                className="absolute top-8 flex flex-col w-3/5 "
               >
                 <h5 className="md:text-2xl flex justify-center">
                   {projects.projectsName}
                 </h5>
                 <p className="text-lg leading-none">{projects.description}</p>
-                <p className="text-lg leading-none">{projects.technologies}</p>
+                <p className="text-lg leading-none mt-3.5">
+                  <span className="text-rose-400 ">
+                    Tecnologias usadas no projeto:
+                  </span>
+                  {projects.technologies}
+                </p>
               </div>
               <div className="absolute bottom-9 flex items-center justify-center gap-1 flex-row">
                 <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">

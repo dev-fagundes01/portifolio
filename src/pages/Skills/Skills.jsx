@@ -1,119 +1,119 @@
 /* eslint-disable react/no-unknown-property */
-import { useState } from 'react'
+import { useState } from "react";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-import Bootstrap from '../../assets/bootstrap_.svg'
-import CSS from '../../assets/css.png'
-import Express from '../../assets/express-original.svg'
-import Git from '../../assets/git.png'
-import HTML from '../../assets/html.png'
-import Insomnia from '../../assets/insomnia_94603.png'
-import JS from '../../assets/js.png'
-import Json from '../../assets/json.png'
-import LogoFigma from '../../assets/LogoFigma.png'
-import Node from '../../assets/node.png'
-import React from '../../assets/react.png'
-import Responsividade from '../../assets/responsividade.png'
-import Sass from '../../assets/sass_icon.svg'
-import Styled from '../../assets/styled 1.svg'
-import Tailwind from '../../assets/tailwind.png'
-import TS from '../../assets/ts.png'
-import Vercel from '../../assets/vercel.jpeg'
-import Vite from '../../assets/vite.png'
-import Vscode from '../../assets/vscode.png'
-import Yarn from '../../assets/yarn.png'
-import { LiTS } from './style'
+import Bootstrap from "../../assets/bootstrap_.svg";
+import CSS from "../../assets/css.png";
+import Express from "../../assets/express-original.svg";
+import Git from "../../assets/git.png";
+import HTML from "../../assets/html.png";
+import Insomnia from "../../assets/insomnia_94603.png";
+import JS from "../../assets/js.png";
+import Json from "../../assets/json.png";
+import LogoFigma from "../../assets/LogoFigma.png";
+import Node from "../../assets/node.png";
+import React from "../../assets/react.png";
+import Responsividade from "../../assets/responsividade.png";
+import Sass from "../../assets/sass_icon.svg";
+import Styled from "../../assets/styled 1.svg";
+import Tailwind from "../../assets/tailwind.png";
+import TS from "../../assets/ts.png";
+import Vercel from "../../assets/vercel.jpeg";
+import Vite from "../../assets/vite.png";
+import Vscode from "../../assets/vscode.png";
+import Yarn from "../../assets/yarn.png";
+import { LiTS } from "./style";
 
 const infoSkills = [
   {
     icon: React,
-    skillsName: 'React'
+    skillsName: "React.JS",
   },
   {
     icon: Node,
-    skillsName: 'Node'
+    skillsName: "Node.JS",
   },
   {
     icon: Styled,
-    skillsName: 'Styled'
+    skillsName: "Styled-Component",
   },
   {
     icon: JS,
-    skillsName: 'JS'
+    skillsName: "JavaScript",
   },
   {
     icon: CSS,
-    skillsName: 'CSS'
+    skillsName: "CSS",
   },
   {
     icon: HTML,
-    skillsName: 'HTML'
+    skillsName: "HTML",
   },
   {
     icon: Json,
-    skillsName: 'Json'
+    skillsName: "Json",
   },
   {
     icon: Git,
-    skillsName: 'Git'
+    skillsName: "Git",
   },
   {
     icon: Express,
-    skillsName: 'Express'
+    skillsName: "Express",
   },
   {
     icon: Bootstrap,
-    skillsName: 'Bootstrap'
+    skillsName: "Bootstrap",
   },
   {
     icon: Sass,
-    skillsName: 'Sass'
+    skillsName: "Sass",
   },
   {
     icon: Tailwind,
-    skillsName: 'TW'
+    skillsName: "Tailwind CSS",
   },
   {
     icon: LogoFigma,
-    skillsName: 'Figma'
+    skillsName: "Figma",
   },
   {
     icon: Vscode,
-    skillsName: 'Vscode'
+    skillsName: "Vscode",
   },
   {
     icon: Yarn,
-    skillsName: 'Yarn'
+    skillsName: "Yarn",
   },
   {
     icon: Responsividade,
-    skillsName: 'Responsividade'
+    skillsName: "Responsividade",
   },
   {
     icon: Vite,
-    skillsName: 'Vite'
+    skillsName: "Vite",
   },
   {
     icon: Vercel,
-    skillsName: 'Vercel'
+    skillsName: "Vercel",
   },
   {
     icon: Insomnia,
-    skillsName: 'Insomnia'
-  }
-]
+    skillsName: "Insomnia",
+  },
+];
 
 function Habilidades() {
-  const [isVisible, setIsVisible] = useState()
+  const [isVisible, setIsVisible] = useState();
 
   const skillVisibilityToggle = (info) => {
     if (isVisible === info) {
-      setIsVisible(null)
+      setIsVisible(null);
     } else {
-      setIsVisible(info)
+      setIsVisible(info);
     }
-  }
+  };
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -123,7 +123,7 @@ function Habilidades() {
       className="grid items-center"
     >
       <div className="flex flex-col items-center justify-center gap-2">
-        <h2 className="text-rose-900 text-2xl md:text-5xl">Habilidades</h2>
+        <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
         <ul className="flex justify-center w-3/5 gap-1 md:w-2/5 md:gap-2 flex-wrap">
           {infoSkills.map((info) => (
             <li
@@ -139,8 +139,8 @@ function Habilidades() {
               <span
                 className={
                   isVisible === info
-                    ? 'opacity-100 justify-center text-xs md:text-lg duration-1000'
-                    : 'opacity-20 text-sss duration-1000'
+                    ? "opacity-100 text-center justify-center text-xs md:text-lg duration-1000 md:w-40"
+                    : "opacity-20 text-sss duration-1000"
                 }
               >
                 {info.skillsName}
@@ -164,6 +164,6 @@ function Habilidades() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }
-export default Habilidades
+export default Habilidades;
