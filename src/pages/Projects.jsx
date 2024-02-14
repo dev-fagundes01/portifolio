@@ -89,7 +89,7 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
       className="h-auto relative"
     >
       <div className="flex flex-col items-center bg-transparent">

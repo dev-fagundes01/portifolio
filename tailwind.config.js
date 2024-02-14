@@ -86,6 +86,7 @@ export default {
       animation: {
         shake: "shake 4s ease-in-out infinite",
         shakeHover: "shake 1s ease-in-out infinite",
+        mainShake: "shake 25s ease-in-out infinite",
         girar: "girar 1s linear infinite",
       },
       screens: {

@@ -12,7 +12,7 @@ function AboutMe() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
       className="grid place-items-center items-center"
     >
       <div className="flex flex-col items-center mt-3 md:mt-0 md:flex-row md:ml-5">

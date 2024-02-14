@@ -24,8 +24,6 @@ function Header({ theme, themeToggler }) {
       </div>
       <Nav isVisible={menuIsVisible}>
         <div className="flex flex-col items-end mr-4 md:hidden">
-          //! Deixar a div fora da tela
-          {/* md:absolute md:top-28 */}
           <HiMenuAlt4
             className="menu text-2xl"
             onClick={() => setMenuIsVisible(true)}

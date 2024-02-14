@@ -119,7 +119,7 @@ function Habilidades() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
       className="grid items-center"
     >
       <div className="flex flex-col items-center justify-center gap-2">

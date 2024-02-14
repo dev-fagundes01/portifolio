@@ -5,19 +5,20 @@ import { motion } from "framer-motion";
 import Background from "./../../src/assets/background.jpg";
 
 function Home() {
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
       className="grid place-items-center
     align-items-center my-20"
     >
       <div className="flex gap-8 flex-col md:flex-row my-0">
         <div
           className="flex
-    align-items-center justify-center flex-col"
+    align-items-center justify-center flex-col animate-mainShake"
         >
           <Link to="/sobre">
             <h1 className="leading-normal text-2xl md:text-5xl ml-1 gm:ml-0 widest">
@@ -29,7 +30,7 @@ function Home() {
             </h1>
           </Link>
         </div>
-        <Link to="/projetos">
+        <Link to="/projetos" className="flex justify-center">
           <img
             className="h-28 rounded-small md:h-64 animate-shake hover:animate-shakeHover"
             src={Background}
