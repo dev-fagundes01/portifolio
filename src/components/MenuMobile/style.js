@@ -14,7 +14,7 @@ export const Container = styled.div`
     isVisible &&
     css`
       opacity: 1;
-      z-index: auto;
+      z-index: 2;
       transition: 2s;
       transform: translateY(-15px);
       position: absolute;

@@ -89,7 +89,7 @@ export default {
       },
       animation: {
         toAppear: "toAppear 5s ease-in-out forwards",
-        toAppearPlus: "toAppear 8s ease-in-out forwards",
+        toAppearPlus: "toAppear 10s ease-in-out forwards",
         shake: "shake 4s ease-in-out infinite",
         shakeHover: "shake 1s ease-in-out infinite",
         mainShake: "shake 8s cubic-bezier(0.36, 0, 0.66, -0.56) 5s infinite",
