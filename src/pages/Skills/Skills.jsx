@@ -124,7 +124,7 @@ function Habilidades() {
     >
       <div className="flex flex-col items-center justify-center gap-2">
         <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
-        <ul className="flex justify-center w-3/5 gap-1 md:w-2/5 md:gap-2 flex-wrap">
+        <ul className="flex justify-center w-3/5 gap-1 flex-wrap opacity-0 animate-toAppear md:w-2/5 md:gap-2">
           {infoSkills.map((info) => (
             <li
               className="flex flex-col items-center h-12 md:h-20 md:w-14 md:mx-1 "
@@ -139,7 +139,7 @@ function Habilidades() {
               <span
                 className={
                   isVisible === info
-                    ? "opacity-100 text-center justify-center text-xs md:text-lg duration-1000 md:w-40"
+                    ? "opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40"
                     : "opacity-20 text-sss duration-1000"
                 }
               >
@@ -148,13 +148,13 @@ function Habilidades() {
             </li>
           ))}
         </ul>
-        <div>
+        <div className="opacity-0 animate-toAppearPlus">
           <h3>Em Breve</h3>
           <ul className="grid place-items-center">
             <LiTS className="relative flex flex-col items-center">
               <img
                 onClick={skillVisibilityToggle}
-                className="w-8 h-8 md:w-14 md:h-14 rounded-small bg-slate-500"
+                className="w-8 h-8 rounded-small bg-slate-500 md:w-14 md:h-14"
                 alt="TypeScript"
                 src={TS}
               />

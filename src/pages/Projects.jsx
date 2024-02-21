@@ -171,7 +171,7 @@ const Projects = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="hidden md:block h-60 w-9/12"
+          className="hidden h-60 w-9/12 opacity-0 animate-toAppear md:block"
         >
           {infoProjects.map((projects) => (
             <SwiperSlide

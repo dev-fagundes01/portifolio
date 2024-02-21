@@ -15,7 +15,7 @@ function Home() {
       className="grid place-items-center
     align-items-center my-20"
     >
-      <div className="flex gap-8 flex-col md:flex-row my-0">
+      <div className="flex gap-8 flex-col my-0 opacity-0 animate-toAppear md:flex-row">
         <div
           className="flex
     align-items-center justify-center flex-col animate-mainShake"

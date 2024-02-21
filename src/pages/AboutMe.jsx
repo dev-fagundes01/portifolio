@@ -15,7 +15,7 @@ function AboutMe() {
       transition={{ duration: 1.5 }}
       className="grid place-items-center items-center"
     >
-      <div className="flex flex-col items-center mt-3 md:mt-0 md:flex-row md:ml-5">
+      <div className="flex flex-col items-center mt-3 opacity-0 animate-toAppear md:flex-row md:ml-5 md:mt-0">
         <img
           className="h-28 md:h-64 rounded-default border-4 p-2 border-sky-300 border-solid "
           src="https://github.com/dfagundes2001.png"

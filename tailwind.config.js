@@ -78,15 +78,21 @@ export default {
           "75%": { transform: "translate(30px)" },
           "100%": { transform: "translate(0)" },
         },
+        toAppear: {
+          from: {transform: "translateX(-100px)"},
+          to: {transform: "translateX(0px)", opacity: "1"}
+        },
         girar: {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
       },
       animation: {
+        toAppear: "toAppear 5s ease-in-out forwards",
+        toAppearPlus: "toAppear 8s ease-in-out forwards",
         shake: "shake 4s ease-in-out infinite",
         shakeHover: "shake 1s ease-in-out infinite",
-        mainShake: "shake 25s ease-in-out infinite",
+        mainShake: "shake 8s cubic-bezier(0.36, 0, 0.66, -0.56) 5s infinite",
         girar: "girar 1s linear infinite",
       },
       screens: {
