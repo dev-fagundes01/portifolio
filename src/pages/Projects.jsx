@@ -70,7 +70,7 @@ const infoProjects = [
   {
     projectsName: "EmBreve",
     description: "Projeto feito em React.js.",
-    technologies: " TipeScript, CSS e HTML.",
+    technologies: " TypeScript, CSS e HTML.",
   },
 ];
 
