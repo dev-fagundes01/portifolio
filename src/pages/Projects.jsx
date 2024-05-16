@@ -40,7 +40,7 @@ const infoProjects = [
   {
     projectsImage: Conversor,
     alt: "img-conversor",
-    projectsName: "Conversor",
+    projectsName: "Conversor de Moedas",
     description:
       "Nele podera converter o Real em Dolar Americano, Euro e Bitcoin.",
     technologies: " JavaScript, CSS, HTML.",
@@ -68,9 +68,14 @@ const infoProjects = [
     links2: "https://github.com/DiegoSilva1919/playstation-store",
   },
   {
-    projectsName: "EmBreve",
-    description: "Projeto feito em React.js.",
-    technologies: " TypeScript, CSS e HTML.",
+    projectsName: "TodoList-Firebase: Em Desenvolvimento",
+    description: "Projeto feito com javascript vanilla e Firebase",
+    technologies: " JavaScript, CSS, HTML, React e Firebase.",
+  },
+  {
+    projectsName: "Dashboard Financeiro: EmBreve",
+    description: "Projeto será feito em React.js.",
+    technologies: " TypeScript, CSS, HTML e React.",
   },
 ];
 
