@@ -1,9 +1,11 @@
-import { Outlet } from 'react-router-dom'
-
 import { ThemeProvider } from 'styled-components'
 
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
+import Home from '../pages/Home'
+import AboutMe from '../pages/AboutMe'
+import Project from '../pages/Projects'
+import Skills from '../pages/Skills/Skills'
 import { ThemeGlobal } from '../styles/globalStyles'
 import { darkTheme, LightTheme } from '../styles/theme'
 
@@ -17,7 +19,10 @@ function DefaultLayout({ theme, setTheme }) {
     <ThemeProvider theme={theme === 'light' ? LightTheme : darkTheme}>
       <ThemeGlobal>
         <Header theme={theme} themeToggler={themeToggler} />
-        <Outlet />
+        <Home/>
+        <AboutMe/>
+        <Project/>
+        <Skills/>
         <Footer />
       </ThemeGlobal>
     </ThemeProvider>

@@ -1,5 +1,4 @@
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
 import { Container } from "./style";
 
@@ -12,36 +11,32 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
       />
       <ul className="cursor-pointer flex flex-col items-center 2xl:hidden">
         <li className="leading-3 h-6">
-          <Link
+          <link
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
-            to="/"
           >
             Inicio
-          </Link>
+          </link>
         </li>
         <li className="leading-3 h-6">
-          <Link
+          <link
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
-            to="/sobre"
           >
             Sobre Mim
-          </Link>
+          </link>
         </li>
         <li className="leading-3 h-6">
-          <Link
+          <link
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
-            to="/projetos"
           >
             Projetos
-          </Link>
+          </link>
         </li>
         <li className="leading-3 h-6">
-          <Link
+          <link
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
-            to="/habilidades"
           >
             Habilidades
-          </Link>
+          </link>
         </li>
       </ul>
     </Container>

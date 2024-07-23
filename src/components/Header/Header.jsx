@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { HiMenuAlt4 } from "react-icons/hi";
-import { Link } from "react-router-dom";
 
 import MenuMobile from "../MenuMobile/MenuMobile";
 import { Nav } from "./style";
@@ -36,36 +35,32 @@ function Header({ theme, themeToggler }) {
 
         <ul className="hidden md:flex gap-4">
           <li className="leading-normal h-3">
-            <Link
+            <link
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/"
             >
               Início
-            </Link>
+            </link>
           </li>
           <li className="leading-normal h-3">
-            <Link
+            <link
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/sobre"
             >
               Sobre Mim
-            </Link>
+            </link>
           </li>
           <li className="leading-normal h-3">
-            <Link
+            <link
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/projetos"
             >
               Projetos
-            </Link>
+            </link>
           </li>
           <li className="leading-normal h-3">
-            <Link
+            <link
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/habilidades"
             >
               Habilidades
-            </Link>
+            </link>
           </li>
         </ul>
       </Nav>

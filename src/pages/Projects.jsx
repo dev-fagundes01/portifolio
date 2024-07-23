@@ -14,7 +14,7 @@ import Conversor from "../../src/img/conversor.png";
 import iMovi from "../../src/img/iMovi.png";
 import DevMovies from "../../src/img/movies.png";
 import StorePS from "../../src/img/Playstation-Store.png";
-import TodolistFirebase from "../../src/img/todolist-firebase.png";
+import TodolistFirebase from "../img/todolist-firebase.png";
 
 const infoProjects = [
   {

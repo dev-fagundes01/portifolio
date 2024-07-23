@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import { motion } from "framer-motion";
 
 import Background from "./../../src/assets/background.jpg";
@@ -20,7 +18,7 @@ function Home() {
           className="flex
     align-items-center justify-center flex-col animate-mainShake"
         >
-          <Link to="/sobre">
+          <link>
             <h1 className="leading-normal text-2xl md:text-5xl ml-1 gm:ml-0 widest">
               <span className="text-base md:text-4xl">Oi!, eu sou</span>
               <br />
@@ -28,15 +26,15 @@ function Home() {
               <br />
               Programador <span className="text-purple-700">Front-End</span>
             </h1>
-          </Link>
+          </link>
         </div>
-        <Link to="/projetos" className="flex justify-center">
+        <link className="flex justify-center">
           <img
             className="h-28 rounded-small md:h-64 animate-shake hover:animate-shakeHover"
             src={Background}
             alt="img-background"
           />
-        </Link>
+        </link>
       </div>
     </motion.section>
   );
