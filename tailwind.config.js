@@ -88,7 +88,7 @@ export default {
         },
       },
       animation: {
-        toAppear: "toAppear 5s ease-in-out forwards",
+        toAppear: "toAppear 4s ease-in-out forwards",
         toAppearPlus: "toAppear 10s ease-in-out forwards",
         shake: "shake 4s ease-in-out infinite",
         shakeHover: "shake 1s ease-in-out infinite",

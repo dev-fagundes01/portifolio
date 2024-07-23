@@ -43,14 +43,7 @@ export const LiTS = styled.li`
       justify-content: center;
       align-items: center;
     }
-    @keyframes girar {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
+
     div::after {
       content: '';
       display: block;

@@ -40,7 +40,7 @@ function Header({ theme, themeToggler }) {
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
               to="/"
             >
-              Inicio
+              Início
             </Link>
           </li>
           <li className="leading-normal h-3">

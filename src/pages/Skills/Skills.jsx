@@ -105,21 +105,30 @@ const infoSkills = [
 ];
 
 function Habilidades() {
-  const [isVisible, setIsVisible] = useState();
+  const [hoveredSkill, setHoveredSkill] = useState(null);
 
-  const skillVisibilityToggle = (info) => {
-    if (isVisible === info) {
-      setIsVisible(null);
-    } else {
-      setIsVisible(info);
-    }
-  };
+  // const skillVisibilityToggle = (info) => {
+  //   if (isVisible === info) {
+  //     setIsVisible(null);
+  //   } else {
+  //     setIsVisible(info);
+  //   }
+  // };
+
+  const handleMouseEnter = (info) => {
+    setHoveredSkill(info)
+  }
+
+  const handleMouseLeave = () => {
+    setHoveredSkill(null)
+  }
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
       className="grid items-center"
     >
       <div className="flex flex-col items-center justify-center gap-2">
@@ -129,6 +138,8 @@ function Habilidades() {
             <li
               className="flex flex-col items-center h-12 md:h-20 md:w-14 md:mx-1 "
               key={info.skillsName}
+              onMouseEnter={() => handleMouseEnter(info)}
+              onMouseLeave={handleMouseLeave}
             >
               <img
                 onClick={() => skillVisibilityToggle(info)}
@@ -137,10 +148,12 @@ function Habilidades() {
                 src={info.icon}
               />
               <span
-                className={
-                  isVisible === info
-                    ? "opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40"
-                    : "opacity-20 text-sss duration-1000"
+                className={`
+                  ${hoveredSkill === info
+                  ? "opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40"
+                  : "opacity-20 text-sss duration-1000"
+                }
+                  `                  
                 }
               >
                 {info.skillsName}
@@ -153,7 +166,6 @@ function Habilidades() {
           <ul className="grid place-items-center">
             <LiTS className="relative flex flex-col items-center">
               <img
-                onClick={skillVisibilityToggle}
                 className="w-8 h-8 rounded-small bg-slate-500 md:w-14 md:h-14"
                 alt="TypeScript"
                 src={TS}
