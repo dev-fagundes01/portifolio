@@ -9,16 +9,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Burger from "../../src/img/Captura de tela burger.png";
-import Conversor from "../../src/img/Captura de tela conversor.png";
-import iMovi from "../../src/img/Captura de tela iMovi.png";
-import DevMovies from "../../src/img/Captura de tela movies.png";
-import StorePS from "../../src/img/Captura de tela Playstation-Store.png";
+import Burger from "../../src/img/hamburgueria.png";
+import Conversor from "../../src/img/conversor.png";
+import iMovi from "../../src/img/iMovi.png";
+import DevMovies from "../../src/img/movies.png";
+import StorePS from "../../src/img/Playstation-Store.png";
+import TodolistFirebase from "../../src/img/todolist-firebase.png";
 
 const infoProjects = [
   {
     projectsImage: DevMovies,
-    alt: "img-devmovies",
+    alt: "imagem do projeto dev movies",
     projectsName: "DevMovies",
     description:
       "Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares,que vão estrear e muito mais.",
@@ -29,7 +30,7 @@ const infoProjects = [
   },
   {
     projectsImage: Burger,
-    alt: "img-hamburgueria",
+    alt: "imagem do projeto hamburgueria",
     projectsName: "Hamburgueria",
     description:
       "Você fara o seu pedido e iremos colocar em uma outra pagina onde você poderá ver e excluir se quiser.",
@@ -39,7 +40,7 @@ const infoProjects = [
   },
   {
     projectsImage: Conversor,
-    alt: "img-conversor",
+    alt: "imagem do projeto conversor",
     projectsName: "Conversor de Moedas",
     description:
       "Nele podera converter o Real em Dolar Americano, Euro e Bitcoin.",
@@ -49,7 +50,7 @@ const infoProjects = [
   },
   {
     projectsImage: iMovi,
-    alt: "img-iMovi",
+    alt: "imagem do projeto iMovi",
     projectsName: "iMovi",
     description:
       "Você vai ver um layout moderno de uma empresa do ramo de construção com informações da empresa, design de projetos e outras coisas.",
@@ -59,7 +60,7 @@ const infoProjects = [
   },
   {
     projectsImage: StorePS,
-    alt: "img-Playstation-Store",
+    alt: "imagem do projeto Playstation-Store",
     projectsName: "Store-PS",
     description:
       "Um site da Playstation-Store com layout diferente e responsivo.",
@@ -68,12 +69,17 @@ const infoProjects = [
     links2: "https://github.com/DiegoSilva1919/playstation-store",
   },
   {
-    projectsName: "TodoList-Firebase: Em Desenvolvimento",
+    projectsImage: TodolistFirebase,
+    alt: "imagem do projeto todolist firebase ",
+    projectsName: "TodoList",
     description: "Projeto feito com javascript vanilla e Firebase",
     technologies: " JavaScript, CSS, HTML, React e Firebase.",
+    links1: "https://todolist-2c452.firebaseapp.com/",
+    links2: "https://github.com/dfagundes2001/todoList-firebase?tab=readme-ov-file",
   },
   {
-    projectsName: "Dashboard Financeiro: EmBreve",
+    projectsName: "Dashboard Financeiro",
+    status: "Em Desenvolvimento",
     description: "Projeto será feito em React.js.",
     technologies: " TypeScript, CSS, HTML e React.",
   },
@@ -204,14 +210,19 @@ const Projects = () => {
                 <h5 className="md:text-2xl flex justify-center">
                   {projects.projectsName}
                 </h5>
+                {
+                  projects.status ? <span className="text-rose-400">{projects.status}</span> : ''
+                }
                 <p className="text-lg leading-none">{projects.description}</p>
                 <p className="text-lg leading-none mt-3.5">
-                  <span className="text-rose-400 ">
-                    Tecnologias usadas no projeto:
+                  <span className="text-rose-400">
+                    Tecnologias:
                   </span>
                   {projects.technologies}
                 </p>
               </div>
+              {
+                projects.status ? '' : 
               <div className="absolute bottom-9 flex items-center justify-center gap-1 flex-row">
                 <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
                   <a
@@ -234,6 +245,7 @@ const Projects = () => {
                   </a>
                 </button>
               </div>
+              }
             </SwiperSlide>
           ))}
         </Swiper>

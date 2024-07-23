@@ -133,7 +133,7 @@ function Habilidades() {
     >
       <div className="flex flex-col items-center justify-center gap-2">
         <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
-        <ul className="flex justify-center w-3/5 gap-1 flex-wrap opacity-0 animate-toAppear md:w-2/5 md:gap-2">
+        <ul className="flex justify-center w-3/5 gap-1 flex-wrap opacity-0 animate-toAppear md:w-2/5 md:mt-4">
           {infoSkills.map((info) => (
             <li
               className="flex flex-col items-center h-12 md:h-20 md:w-14 md:mx-1 "
