@@ -26,6 +26,7 @@ export default {
         65: "65rem",
         50: "50vh",
         60: "60vh",
+        87: "87vh"
       },
       margin: {
         1: "1%",

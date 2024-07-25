@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { HiMenuAlt4 } from "react-icons/hi";
-import { Link } from "react-router-dom";
 
 import MenuMobile from "../MenuMobile/MenuMobile";
 import { Nav } from "./style";
@@ -11,7 +10,7 @@ function Header({ theme, themeToggler }) {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   return (
-    <header className="h-32 flex w-full justify-between p-2 md:p-3">
+    <header className="h-32 w-full fixed z-10 flex justify-between p-2 md:p-3">
       <div className="flex items-start pt-1 md:pt-0">
         <h2 className="text-purple-400 text-base md:text-2xl">Portfólio</h2>
         <button onClick={themeToggler}>
@@ -36,36 +35,36 @@ function Header({ theme, themeToggler }) {
 
         <ul className="hidden md:flex gap-4">
           <li className="leading-normal h-3">
-            <Link
+            <a
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/"
+              href="#início"
             >
               Início
-            </Link>
+            </a>
           </li>
           <li className="leading-normal h-3">
-            <Link
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/sobre"
+            <a
+              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"              
+              href="#sobre"
             >
               Sobre Mim
-            </Link>
+            </a>
           </li>
           <li className="leading-normal h-3">
-            <Link
+            <a
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/projetos"
+              href="#projetos"
             >
               Projetos
-            </Link>
+            </a>
           </li>
           <li className="leading-normal h-3">
-            <Link
+            <a
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
-              to="/habilidades"
+              href="#habilidades"
             >
               Habilidades
-            </Link>
+            </a>
           </li>
         </ul>
       </Nav>

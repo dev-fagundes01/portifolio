@@ -18,7 +18,7 @@ const Footer = () => {
           <img
             className="rounded-full h-3 md:h-5"
             src={Linkedin}
-            alt="img-linkedin"
+            alt="imagem do linkedin"
           />
         </a>
         <a

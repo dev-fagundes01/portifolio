@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
@@ -14,7 +14,7 @@ import Conversor from "../../src/img/conversor.png";
 import iMovi from "../../src/img/iMovi.png";
 import DevMovies from "../../src/img/movies.png";
 import StorePS from "../../src/img/Playstation-Store.png";
-import TodolistFirebase from "../../src/img/todolist-firebase.png";
+import TodolistFirebase from "../img/todolist-firebase.png";
 
 const infoProjects = [
   {
@@ -87,6 +87,19 @@ const infoProjects = [
 
 const Projects = () => {
   const [isMouseOver, setIsMouseOver] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, [])
 
   const handleMouseOver = (projectsName) => {
     setIsMouseOver((prev) => ({ ...prev, [projectsName]: false }));
@@ -95,20 +108,22 @@ const Projects = () => {
   const handleMouseOut = (projectsName) => {
     setIsMouseOver((prev) => ({ ...prev, [projectsName]: true }));
   };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="h-auto relative"
+      className="h-screen relative"
+      id="projetos"
     >
       <div className="flex flex-col items-center bg-transparent">
         <h2 className="text-2xl md:text-5xl text-sky-500 mb-2.2">
           Principais Projetos
         </h2>
         <Swiper
-          slidesPerView={1}
+          slidesPerView={isMobile ? 1 : 3}
           cssMode={true}
           navigation={true}
           pagination={true}
@@ -127,125 +142,59 @@ const Projects = () => {
                 onMouseOut={() => handleMouseOut(projects.projectsName)}
                 style={{
                   opacity: isMouseOver[projects.projectsName] ? "0.20" : "1",
+                  zIndex: isMouseOver[projects.projectsName] ? "0" : "111",
                 }}
                 className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
                 src={projects.projectsImage}
                 alt={projects.alt}
               />
-              <div
-                onMouseOver={() => handleMouseOver(projects.projectsName)}
-                onMouseOut={() => handleMouseOut(projects.projectsName)}
-                style={{
-                  opacity: isMouseOver[projects.projectsName] ? "1" : "0",
-                }}
-                className="absolute top-16 flex flex-col w-3/5 gap-3"
-              >
-                <h5 className="text-lg">{projects.projectsName}</h5>
-                <p className="text-sm leading-none">{projects.description}</p>
-                <p className="text-sm leading-none">
-                  <span className="text-rose-400 ">
-                    Tecnologias usadas no projeto:
-                  </span>
-                  {projects.technologies}
-                </p>
+              <div className="flex flex-col items-center gap-20 absolute top-16 ">
+                <div
+                  onMouseOver={() => handleMouseOver(projects.projectsName)}
+                  onMouseOut={() => handleMouseOut(projects.projectsName)}
+                  style={{
+                    opacity: isMouseOver[projects.projectsName] ? "1" : "0",
+                  }}
+                  className="flex flex-col w-3/5 gap-3"
+                >
+                  <h5 className="text-lg">{projects.projectsName}</h5>
+                  <p className="text-sm leading-none">{projects.description}</p>
+                  <p className="text-sm leading-none">
+                    <span className="text-rose-400 ">
+                      Tecnologias usadas no projeto:
+                    </span>
+                    {projects.technologies}
+                  </p>
+                </div>
+                <div
+                  onMouseOver={() => handleMouseOver(projects.projectsName)}
+                  onMouseOut={() => handleMouseOut(projects.projectsName)}
+                  style={{
+                    opacity: isMouseOver[projects.projectsName] ? "1" : "0.8",
+                  }}
+                  className="flex items-center justify-center gap-1 flex-row">
+                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                    <a
+                      className="text-xs"
+                      target="_blank"
+                      href={projects.links1}
+                      rel="noreferrer"
+                    >
+                      Projeto
+                    </a>
+                  </button>
+                  <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
+                    <a
+                      className="text-xs"
+                      target="_blank"
+                      href={projects.links2}
+                      rel="noreferrer"
+                    >
+                      Repositório
+                    </a>
+                  </button>
+                </div>
               </div>
-              <div className="absolute bottom-9 flex items-center justify-center gap-1 flex-row">
-                <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                  <a
-                    className="text-xs"
-                    target="_blank"
-                    href={projects.links1}
-                    rel="noreferrer"
-                  >
-                    Projeto
-                  </a>
-                </button>
-                <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                  <a
-                    className="text-xs"
-                    target="_blank"
-                    href={projects.links2}
-                    rel="noreferrer"
-                  >
-                    Repositório
-                  </a>
-                </button>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <Swiper
-          slidesPerView={3}
-          cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="hidden h-60 w-9/12 opacity-0 animate-toAppear md:block"
-        >
-          {infoProjects.map((projects) => (
-            <SwiperSlide
-              className="relative text-center bg-transparent flex justify-center items-center flex-col mx-0.5"
-              key={projects.projectsName}
-            >
-              <img
-                onMouseOver={() => handleMouseOver(projects.projectsName)}
-                onMouseOut={() => handleMouseOut(projects.projectsName)}
-                style={{
-                  opacity: isMouseOver[projects.projectsName] ? "0.20" : "1",
-                }}
-                className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
-                src={projects.projectsImage}
-                alt={projects.alt}
-              />
-              <div
-                onMouseOver={() => handleMouseOver(projects.projectsName)}
-                onMouseOut={() => handleMouseOut(projects.projectsName)}
-                style={{
-                  opacity: isMouseOver[projects.projectsName] ? "1" : "0",
-                }}
-                className="absolute top-8 flex flex-col w-3/5 "
-              >
-                <h5 className="md:text-2xl flex justify-center">
-                  {projects.projectsName}
-                </h5>
-                {
-                  projects.status ? <span className="text-rose-400">{projects.status}</span> : ''
-                }
-                <p className="text-lg leading-none">{projects.description}</p>
-                <p className="text-lg leading-none mt-3.5">
-                  <span className="text-rose-400">
-                    Tecnologias:
-                  </span>
-                  {projects.technologies}
-                </p>
-              </div>
-              {
-                projects.status ? '' : 
-              <div className="absolute bottom-9 flex items-center justify-center gap-1 flex-row">
-                <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                  <a
-                    className="text-sm"
-                    target="_blank"
-                    href={projects.links1}
-                    rel="noreferrer"
-                  >
-                    Projeto
-                  </a>
-                </button>
-                <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                  <a
-                    className="text-sm"
-                    target="_blank"
-                    href={projects.links2}
-                    rel="noreferrer"
-                  >
-                    Repositório
-                  </a>
-                </button>
-              </div>
-              }
             </SwiperSlide>
           ))}
         </Swiper>
