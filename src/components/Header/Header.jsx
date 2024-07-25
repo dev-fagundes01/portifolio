@@ -10,7 +10,7 @@ function Header({ theme, themeToggler }) {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   return (
-    <header className="h-32 flex w-full justify-between p-2 md:p-3">
+    <header className="h-32 w-full fixed z-10 flex justify-between p-2 md:p-3">
       <div className="flex items-start pt-1 md:pt-0">
         <h2 className="text-purple-400 text-base md:text-2xl">Portfólio</h2>
         <button onClick={themeToggler}>
@@ -35,32 +35,36 @@ function Header({ theme, themeToggler }) {
 
         <ul className="hidden md:flex gap-4">
           <li className="leading-normal h-3">
-            <link
+            <a
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
+              href="#início"
             >
               Início
-            </link>
+            </a>
           </li>
           <li className="leading-normal h-3">
-            <link
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
+            <a
+              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"              
+              href="#sobre"
             >
               Sobre Mim
-            </link>
+            </a>
           </li>
           <li className="leading-normal h-3">
-            <link
+            <a
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
+              href="#projetos"
             >
               Projetos
-            </link>
+            </a>
           </li>
           <li className="leading-normal h-3">
-            <link
+            <a
               className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
+              href="#habilidades"
             >
               Habilidades
-            </link>
+            </a>
           </li>
         </ul>
       </Nav>

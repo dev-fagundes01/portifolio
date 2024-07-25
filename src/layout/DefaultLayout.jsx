@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import Footer from '../components/Footer/Footer'
@@ -9,7 +10,9 @@ import Skills from '../pages/Skills/Skills'
 import { ThemeGlobal } from '../styles/globalStyles'
 import { darkTheme, LightTheme } from '../styles/theme'
 
-function DefaultLayout({ theme, setTheme }) {
+function DefaultLayout() {
+  const [theme, setTheme] = useState('dark')
+  
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }
@@ -23,7 +26,7 @@ function DefaultLayout({ theme, setTheme }) {
         <AboutMe/>
         <Project/>
         <Skills/>
-        <Footer />
+        <Footer/>
       </ThemeGlobal>
     </ThemeProvider>
   )

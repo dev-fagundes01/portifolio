@@ -13,7 +13,8 @@ function AboutMe() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="grid place-items-center items-center"
+      className="h-screen grid place-items-center items-center"
+      id="sobre"
     >
       <div className="flex flex-col items-center mt-3 opacity-0 animate-toAppear md:flex-row md:ml-5 md:mt-0">
         <img

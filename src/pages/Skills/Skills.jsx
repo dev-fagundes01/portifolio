@@ -107,14 +107,6 @@ const infoSkills = [
 function Habilidades() {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
-  // const skillVisibilityToggle = (info) => {
-  //   if (isVisible === info) {
-  //     setIsVisible(null);
-  //   } else {
-  //     setIsVisible(info);
-  //   }
-  // };
-
   const handleMouseEnter = (info) => {
     setHoveredSkill(info)
   }
@@ -129,7 +121,8 @@ function Habilidades() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="grid items-center"
+      className="h-screen grid items-center"
+      id="habilidades"
     >
       <div className="flex flex-col items-center justify-center gap-2">
         <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
@@ -141,12 +134,6 @@ function Habilidades() {
               onMouseEnter={() => handleMouseEnter(info)}
               onMouseLeave={handleMouseLeave}
             >
-              <img
-                onClick={() => skillVisibilityToggle(info)}
-                className="cursor-pointer rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-                alt={info.skillsName}
-                src={info.icon}
-              />
               <span
                 className={`
                   ${hoveredSkill === info
@@ -158,6 +145,11 @@ function Habilidades() {
               >
                 {info.skillsName}
               </span>
+              <img
+                className="cursor-pointer rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
+                alt={info.skillsName}
+                src={info.icon}
+              />
             </li>
           ))}
         </ul>

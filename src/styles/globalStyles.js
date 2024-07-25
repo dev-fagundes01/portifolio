@@ -10,7 +10,6 @@ export default createGlobalStyle`
     }
 `
 export const ThemeGlobal = styled.div`
-  height: 100vh;
   background: ${(props) => props.theme.primary};
   color: ${(props) => props.theme.textPrimary};
 `
