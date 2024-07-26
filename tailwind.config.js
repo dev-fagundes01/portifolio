@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -30,9 +29,9 @@ export default {
       },
       margin: {
         1: "1%",
+        0.5: "0.5rem",
         0.9: "0.9rem",
         1.1: "1.1rem",
-        2.2: "2rem",
         3: "-3rem",
         30: "30rem",
         22: "revert",
@@ -80,7 +79,7 @@ export default {
           "100%": { transform: "translate(0)" },
         },
         toAppear: {
-          from: {transform: "translateX(-100px)"},
+          from: {transform: "translateX(-300px)"},
           to: {transform: "translateX(0px)", opacity: "1"}
         },
         girar: {
@@ -89,8 +88,9 @@ export default {
         },
       },
       animation: {
-        toAppear: "toAppear 4s ease-in-out forwards",
-        toAppearPlus: "toAppear 10s ease-in-out forwards",
+        stopAppear: "toAppear 0s forwards",
+        toAppear: "toAppear 7s ease-in-out forwards",
+        toAppearPlus: "toAppear 11s ease-in-out forwards",
         shake: "shake 4s ease-in-out infinite",
         shakeHover: "shake 1s ease-in-out infinite",
         mainShake: "shake 8s cubic-bezier(0.36, 0, 0.66, -0.56) 5s infinite",

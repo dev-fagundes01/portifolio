@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from "react";
 
 import GitHub from "./../../assets/github.png";

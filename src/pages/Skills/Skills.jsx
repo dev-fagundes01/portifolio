@@ -1,7 +1,4 @@
-/* eslint-disable react/no-unknown-property */
 import { useState } from "react";
-
-import { motion } from "framer-motion";
 
 import Bootstrap from "../../assets/bootstrap_.svg";
 import CSS from "../../assets/css.png";
@@ -24,6 +21,7 @@ import Vite from "../../assets/vite.png";
 import Vscode from "../../assets/vscode.png";
 import Yarn from "../../assets/yarn.png";
 import { LiTS } from "./style";
+import AnimatedSection from "../../components/AnimatedSection/AnimatedSection";
 
 const infoSkills = [
   {
@@ -104,7 +102,7 @@ const infoSkills = [
   },
 ];
 
-function Habilidades() {
+function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   const handleMouseEnter = (info) => {
@@ -116,58 +114,55 @@ function Habilidades() {
   }
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+    <section
       className="h-screen grid items-center"
-      id="habilidades"
-    >
-      <div className="flex flex-col items-center justify-center gap-2">
-        <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
-        <ul className="flex justify-center w-3/5 gap-1 flex-wrap opacity-0 animate-toAppear md:w-2/5 md:mt-4">
-          {infoSkills.map((info) => (
-            <li
-              className="flex flex-col items-center h-12 md:h-20 md:w-14 md:mx-1 "
-              key={info.skillsName}
-              onMouseEnter={() => handleMouseEnter(info)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <span
-                className={`
-                  ${hoveredSkill === info
-                  ? "opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40"
-                  : "opacity-20 text-sss duration-1000"
-                }
-                  `                  
-                }
+      id="habilidades">
+      <AnimatedSection>
+        <div className="flex flex-col items-center justify-center gap-2">
+          <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
+          <ul className="flex justify-center w-3/5 gap-1 flex-wrap opacity-0 animate-toAppear md:w-2/5 md:mt-4">
+            {infoSkills.map((info) => (
+              <li
+                className="flex flex-col items-center h-12 md:h-20 md:w-14 md:mx-1 "
+                key={info.skillsName}
+                onMouseEnter={() => handleMouseEnter(info)}
+                onMouseLeave={handleMouseLeave}
               >
-                {info.skillsName}
-              </span>
-              <img
-                className="cursor-pointer rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
-                alt={info.skillsName}
-                src={info.icon}
-              />
-            </li>
-          ))}
-        </ul>
-        <div className="opacity-0 animate-toAppearPlus">
-          <h3>Em Breve</h3>
-          <ul className="grid place-items-center">
-            <LiTS className="relative flex flex-col items-center">
-              <img
-                className="w-8 h-8 rounded-small bg-slate-500 md:w-14 md:h-14"
-                alt="TypeScript"
-                src={TS}
-              />
-              <div className="w-8 md:w-14" />
-            </LiTS>
+                <span
+                  className={`
+                  ${hoveredSkill === info
+                      ? "opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40"
+                      : "opacity-20 text-sss duration-1000"
+                    }
+                  `
+                  }
+                >
+                  {info.skillsName}
+                </span>
+                <img
+                  className="cursor-pointer rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
+                  alt={info.skillsName}
+                  src={info.icon}
+                />
+              </li>
+            ))}
           </ul>
+          <div className="opacity-0 animate-toAppearPlus">
+            <h3>Em Breve</h3>
+            <ul className="grid place-items-center">
+              <LiTS className="relative flex flex-col items-center">
+                <img
+                  className="w-8 h-8 rounded-small bg-slate-500 md:w-14 md:h-14"
+                  alt="TypeScript"
+                  src={TS}
+                />
+                <div className="w-8 md:w-14" />
+              </LiTS>
+            </ul>
+          </div>
         </div>
-      </div>
-    </motion.section>
+      </AnimatedSection>
+    </section>
   );
 }
-export default Habilidades;
+export default Skills;

@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['isVisible'].includes(prop),
+})`
   cursor: pointer;
   margin-top: 1rem;
   opacity: 0;
