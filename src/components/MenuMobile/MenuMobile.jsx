@@ -13,6 +13,7 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
         <li className="leading-3 h-6">
           <a
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
+            href="#início"
           >
             Inicio
           </a>
@@ -20,6 +21,7 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
         <li className="leading-3 h-6">
           <a
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
+            href="#sobre"
           >
             Sobre Mim
           </a>
@@ -27,6 +29,7 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
         <li className="leading-3 h-6">
           <a
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
+            href="#projetos"
           >
             Projetos
           </a>
@@ -34,6 +37,7 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
         <li className="leading-3 h-6">
           <a
             className="text-xs no-underline text-rose-400 hover:duration-1000 hover:text-rose-900"
+            href="#habilidades"
           >
             Habilidades
           </a>

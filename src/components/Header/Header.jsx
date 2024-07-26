@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -12,7 +11,7 @@ function Header({ theme, themeToggler }) {
   return (
     <header className="h-32 w-full fixed z-10 flex justify-between p-2 md:p-3">
       <div className="flex items-start pt-1 md:pt-0">
-        <h2 className="text-purple-400 text-base md:text-2xl">Portfólio</h2>
+        <h2 className="text-base md:text-2xl">Diego <span className="text-purple-600">Fagundes</span></h2>
         <button onClick={themeToggler}>
           {theme === "light" ? (
             <BiMoon className="h-3 md:h-5" />
