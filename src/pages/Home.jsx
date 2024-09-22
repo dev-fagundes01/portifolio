@@ -1,5 +1,5 @@
 
-import Background from "./../../src/assets/background.jpg";
+import Background from "./../../src/imgs/others/background.jpg";
 import AnimatedSection from "../components/AnimatedSection/AnimatedSection";
 
 function Home() {

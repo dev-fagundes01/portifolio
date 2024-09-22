@@ -1,7 +1,7 @@
-import Download from "./../../src/assets/download.png";
-import Livros from "./../../src/assets/livros.png";
-import Sports from "./../../src/assets/sports.png";
-import Xadrez from "./../../src/assets/xadrez.jpeg";
+import Download from "./../../src/imgs/others/download.png";
+import Livros from "./../../src/imgs/personal/livros.png";
+import Sports from "./../../src/imgs/personal/sports.png";
+import Xadrez from "./../../src/imgs/personal/xadrez.jpeg";
 import AnimatedSection from "../components/AnimatedSection/AnimatedSection";
 
 function AboutMe() {

@@ -1,25 +1,26 @@
 import { useState } from "react";
 
-import Bootstrap from "../../assets/bootstrap_.svg";
-import CSS from "../../assets/css.png";
-import Express from "../../assets/express-original.svg";
-import Git from "../../assets/git.png";
-import HTML from "../../assets/html.png";
-import Insomnia from "../../assets/insomnia_94603.png";
-import JS from "../../assets/js.png";
-import Json from "../../assets/json.png";
-import LogoFigma from "../../assets/LogoFigma.png";
-import Node from "../../assets/node.png";
-import React from "../../assets/react.png";
-import Responsividade from "../../assets/responsividade.png";
-import Sass from "../../assets/sass_icon.svg";
-import Styled from "../../assets/styled 1.svg";
-import Tailwind from "../../assets/tailwind.png";
-import TS from "../../assets/ts.png";
-import Vercel from "../../assets/vercel.jpeg";
-import Vite from "../../assets/vite.png";
-import Vscode from "../../assets/vscode.png";
-import Yarn from "../../assets/yarn.png";
+import Bootstrap from "../../imgs/skills/bootstrap_.svg";
+import CSS from "../../imgs/skills/css.png";
+import Express from "../../imgs/skills/express-original.svg";
+import Git from "../../imgs/skills/git.png";
+import HTML from "../../imgs/skills/html.png";
+import JS from "../../imgs/skills/js.png";
+import Json from "../../imgs/skills/json.png";
+import LogoFigma from "../../imgs/skills/LogoFigma.png";
+import Node from "../../imgs/skills/node.png";
+import React from "../../imgs/skills/react.png";
+import Responsividade from "../../imgs/skills/responsividade.png";
+import Sass from "../../imgs/skills/sass_icon.svg";
+import Styled from "../../imgs/skills/styled 1.svg";
+import Tailwind from "../../imgs/skills/tailwind.png";
+import TS from "../../imgs/skills/ts.png";
+import Prisma from "../../imgs/skills/prisma.png";
+import Mongo from "../../imgs/skills/mongodb_icon.png";
+import SQL from "../../imgs/skills/sql-server.png";
+import Vite from "../../imgs/skills/vite.png";
+import Vscode from "../../imgs/skills/vscode.png";
+import Yarn from "../../imgs/skills/yarn.png";
 import { LiTS } from "./style";
 import AnimatedSection from "../../components/AnimatedSection/AnimatedSection";
 
@@ -65,6 +66,10 @@ const infoSkills = [
     skillsName: "Bootstrap",
   },
   {
+    icon: TS,
+    skillsName: "TypeScript",
+  },
+  {
     icon: Sass,
     skillsName: "Sass",
   },
@@ -93,12 +98,12 @@ const infoSkills = [
     skillsName: "Vite",
   },
   {
-    icon: Vercel,
-    skillsName: "Vercel",
+    icon: Mongo,
+    skillsName: "MongoDB",
   },
   {
-    icon: Insomnia,
-    skillsName: "Insomnia",
+    icon: Prisma,
+    skillsName: "Prisma",
   },
 ];
 
@@ -153,8 +158,8 @@ function Skills() {
               <LiTS className="relative flex flex-col items-center">
                 <img
                   className="w-8 h-8 rounded-small bg-slate-500 md:w-14 md:h-14"
-                  alt="TypeScript"
-                  src={TS}
+                  alt="SQL"
+                  src={SQL}
                 />
                 <div className="w-8 md:w-14" />
               </LiTS>

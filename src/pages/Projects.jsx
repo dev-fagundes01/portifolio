@@ -7,15 +7,27 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Burger from "../../src/img/hamburgueria.png";
-import Conversor from "../../src/img/conversor.png";
-import iMovi from "../../src/img/iMovi.png";
-import DevMovies from "../../src/img/movies.png";
-import StorePS from "../../src/img/Playstation-Store.png";
-import TodolistFirebase from "../img/todolist-firebase.png";
+import UserList from "../../src/imgs/projects/user-list.png";
+import Conversor from "../../src/imgs/projects/conversor.png";
+import DevBills from "../../src/imgs/projects/dev-bills.png";
+import iMovi from "../../src/imgs/projects/iMovi.png";
+import EmBreve from "../../src/imgs/projects/em-breve.jpg";
+import DevMovies from "../../src/imgs/projects/movies.png";
+import TodolistFirebase from "../imgs/projects/todolist-firebase.png";
 import AnimatedSection from "../components/AnimatedSection/AnimatedSection";
 
 const infoProjects = [
+  {
+    projectsImage: DevBills,
+    alt: "imagem do projeto dev bills",
+    projectsName: "DevBills",
+    description:
+      "Um painel financeiro onde você pode criar e gerenciar suas transações, especificando valores, datas, tipos de transações e categorias personalizadas.",
+    technologies:
+      " React, TypeScript, Docker, MongoDB, Node, Express, styled-components e HTML.",
+    links1: "https://devbills-front.vercel.app/",
+    links2: "https://github.com/dfagundes01/devbills-front",
+  },
   {
     projectsImage: DevMovies,
     alt: "imagem do projeto dev movies",
@@ -23,34 +35,37 @@ const infoProjects = [
     description:
       "Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares,que vão estrear e muito mais.",
     technologies:
-      " React.js, Javascript, CSS, HTML e o Axios para consumir uma api publica.",
+      " React.js, Javascript, styled-components, HTML e o Axios para consumir uma api publica.",
     links1: "https://dev-movies-df.netlify.app",
     links2: "https://github.com/DiegoSilva1919/dev-movies",
   },
   {
-    projectsImage: Burger,
-    alt: "imagem do projeto hamburgueria",
-    projectsName: "Hamburgueria",
+    projectsImage: UserList,
+    alt: "imagem do projeto User List",
+    projectsName: "User List",
     description:
-      "Você fara o seu pedido e iremos colocar em uma outra pagina onde você poderá ver e excluir se quiser.",
-    technologies: " React.js, Node.js, JavaScript, CSS e HTML",
-    links1: "https://hamburgueria-df.netlify.app",
-    links2: "https://github.com/DiegoSilva1919/hamburgueria",
+      "Você poderá cadastrar usuários e, em uma página dedicada, visualizar, editar ou excluir seus registros conforme necessário.",
+    technologies: " React.js, Node.js, MongoDB, Prisma, JavaScript, styled-components e HTML",
+    links1: "https://react-app-devclub.netlify.app/",
+    links2: "https://github.com/dfagundes01/user-list",
+  },
+  {
+    projectsImage: EmBreve,
+    alt: "imagem do projeto User List",
+    projectsName: "Hamburgueria",
+    status: "Em Breve",
+    description: "Projeto será feito em React.js e Node.js",
+    frontendTechnologies: "Front-End: Axios, Styled-Components, React-Toastify, Mui-Material, Hook-Form, Yup, Context-Api",
+    backendTechnologies: "Back-End: Docker, Express, Token JWT, Multer, Yup, Bcrypt, Mongoose, Sequelize, PostgreSQL, MongoDB"
   },
   {
     projectsImage: TodolistFirebase,
     alt: "imagem do projeto todolist firebase ",
     projectsName: "TodoList",
     description: "Projeto feito com javascript vanilla e Firebase",
-    technologies: " JavaScript, CSS, HTML, React e Firebase.",
+    technologies: " JavaScript, CSS, HTML e Firebase.",
     links1: "https://todolist-2c452.firebaseapp.com/",
     links2: "https://github.com/dfagundes2001/todoList-firebase?tab=readme-ov-file",
-  },
-  {
-    projectsName: "Dashboard Financeiro",
-    status: "Em Desenvolvimento",
-    description: "Projeto será feito em React.js.",
-    technologies: " TypeScript, CSS, HTML e React.",
   },
   {
     projectsImage: Conversor,
@@ -71,16 +86,6 @@ const infoProjects = [
     technologies: " Framework Bootstrap.",
     links1: "https://i-movi-xi.vercel.app/",
     links2: "https://github.com/DiegoSilva1919/iMovi",
-  },
-  {
-    projectsImage: StorePS,
-    alt: "imagem do projeto Playstation-Store",
-    projectsName: "Store-PS",
-    description:
-      "Um site da Playstation-Store com layout diferente e responsivo.",
-    technologies: " JavaScript, CSS e HTML.",
-    links1: "https://dfagundes2001.github.io/playstation-store/",
-    links2: "https://github.com/DiegoSilva1919/playstation-store",
   },
 ];
 
@@ -118,7 +123,7 @@ const Projects = () => {
             Principais Projetos
           </h2>
           <Swiper
-            slidesPerView={isMobile ? 1 : 3}
+            slidesPerView={isMobile ? 1 : 2}
             cssMode={true}
             navigation={true}
             pagination={true}
@@ -136,15 +141,14 @@ const Projects = () => {
                   onMouseOver={() => handleMouseOver(projects.projectsName)}
                   onMouseOut={() => handleMouseOut(projects.projectsName)}
                   style={{
-                    opacity: isMouseOver[projects.projectsName] ? "0.20" : "1",
-                    zIndex: isMouseOver[projects.projectsName] ? "0" : "111",
+                    opacity: isMouseOver[projects.projectsName] ? "0.03" : "1",
                     transition: "opacity 1s ease, z-index 0.3s ease"
                   }}
                   className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
                   src={projects.projectsImage}
                   alt={projects.alt}
                 />
-                <div className="flex flex-col items-center gap-20 absolute top-16 ">
+                <div className="w-full flex flex-col items-center gap-10 absolute top-16">
                   <div
                     onMouseOver={() => handleMouseOver(projects.projectsName)}
                     onMouseOut={() => handleMouseOut(projects.projectsName)}
@@ -162,9 +166,13 @@ const Projects = () => {
                     <p className="text-sm leading-none">{projects.description}</p>
                     <p className="text-sm leading-none">
                       <span className="text-rose-400">
-                        Tecnologias:
+                        Tecnologias
                       </span>
-                      {projects.technologies}
+                      <br />
+                      {projects.technologies || projects.frontendTechnologies}
+                      <br />
+                      <br />
+                      {projects.backendTechnologies}
                     </p>
                   </div>
                   <div

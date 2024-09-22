@@ -91,9 +91,9 @@ export default {
         stopAppear: "toAppear 0s forwards",
         toAppear: "toAppear 7s ease-in-out forwards",
         toAppearPlus: "toAppear 11s ease-in-out forwards",
-        shake: "shake 4s ease-in-out infinite",
+        shake: "shake 6s ease-in-out infinite",
         shakeHover: "shake 1s ease-in-out infinite",
-        mainShake: "shake 8s cubic-bezier(0.36, 0, 0.66, -0.56) 5s infinite",
+        mainShake: "shake 12s cubic-bezier(0.36, 0, 0.66, -0.56) 5s infinite",
         girar: "girar 1s linear infinite",
       },
       screens: {

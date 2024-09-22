@@ -20,7 +20,7 @@ function Header({ theme, themeToggler }) {
           )}
         </button>
       </div>
-      <Nav isVisible={menuIsVisible}>
+      <Nav className="h-8" isVisible={menuIsVisible}>
         <div className="flex flex-col items-end mr-4 md:hidden">
           <HiMenuAlt4
             className="menu text-2xl"

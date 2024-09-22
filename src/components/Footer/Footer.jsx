@@ -1,8 +1,8 @@
 import React from "react";
 
-import GitHub from "./../../assets/github.png";
-import Linkedin from "./../../assets/linkedin.png";
-import Whatsapp from "./../../assets/WhatsApp-Carousel.jpg";
+import GitHub from "./../../imgs/social/github.png";
+import Linkedin from "./../../imgs/social/linkedin.png";
+import Whatsapp from "./../../imgs/social/WhatsApp-Carousel.jpg";
 
 const Footer = () => {
   return (
