@@ -14,21 +14,17 @@ function Home() {
             className="flex
     align-items-center justify-center flex-col animate-mainShake hover:animate-stopAppear"
           >
-            <a>
-              <h1 className="leading-normal text-2xl md:text-5xl ml-1 gm:ml-0">
-                Programador <span className="text-purple-700">Front-End</span>
-                <br />
-                <span className="w-64 text-lg text-purple-600 flex md:w-40 md:text-2xl">Explorando o desconhecido, entregando o excepcional. Tecendo linhas de código para formar obras-primas digitais.</span>
-              </h1>
-            </a>
+            <h1 className="leading-normal text-2xl md:text-5xl ml-1 gm:ml-0">
+              Programador <span className="text-purple-700">Front-End</span>
+              <br />
+              <span className="w-64 text-lg text-purple-600 flex md:w-40 md:text-2xl">Explorando o desconhecido, entregando o excepcional. Tecendo linhas de código para formar obras-primas digitais.</span>
+            </h1>
           </div>
-          <a className="flex justify-center">
-            <img
-              className="h-28 rounded-small md:h-64 animate-shake hover:animate-shakeHover"
-              src={Background}
-              alt="img-background"
-            />
-          </a>
+          <img
+            className="h-28 rounded-small md:h-64 animate-shake hover:animate-shakeHover"
+            src={Background}
+            alt="img-background"
+          />
         </div>
       </AnimatedSection>
     </section>

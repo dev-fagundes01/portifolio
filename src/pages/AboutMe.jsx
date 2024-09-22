@@ -13,7 +13,7 @@ function AboutMe() {
         <div className="flex flex-col items-center mt-3 opacity-0 md:flex-row md:ml-11 md:mt-0 animate-toAppear">
           <img
             className="h-28 md:h-64 rounded-default border-4 p-2 border-sky-300 border-solid animate-toAppearPlus"
-            src="https://github.com/dfagundes2001.png"
+            src="https://github.com/dfagundes01.png"
             alt="imf-foto"
           />
           <div className="flex flex-col ml-10 w-4/5 md:gap-2">

@@ -113,7 +113,7 @@ const Projects = () => {
       className="h-screen relative"
       id="projetos">
       <AnimatedSection>
-        <div className="flex flex-col items-center gap-3 bg-transparent">
+        <div className="pt-24 flex flex-col items-center gap-3 bg-transparent">
           <h2 className="text-2xl md:text-5xl text-sky-500">
             Principais Projetos
           </h2>
@@ -138,6 +138,7 @@ const Projects = () => {
                   style={{
                     opacity: isMouseOver[projects.projectsName] ? "0.20" : "1",
                     zIndex: isMouseOver[projects.projectsName] ? "0" : "111",
+                    transition: "opacity 1s ease, z-index 0.3s ease"
                   }}
                   className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
                   src={projects.projectsImage}
@@ -149,8 +150,9 @@ const Projects = () => {
                     onMouseOut={() => handleMouseOut(projects.projectsName)}
                     style={{
                       opacity: isMouseOver[projects.projectsName] ? "1" : "0",
+                      transition: "opacity 1s ease"
                     }}
-                    className="flex flex-col w-3/5 gap-3"
+                    className="div-info flex flex-col w-3/5 gap-3"
                   >
                     <h5 className="text-lg">{projects.projectsName}</h5>
                     {
@@ -170,6 +172,7 @@ const Projects = () => {
                     onMouseOut={() => handleMouseOut(projects.projectsName)}
                     style={{
                       opacity: isMouseOver[projects.projectsName] ? "1" : "0.85",
+                      transition: "opacity 1s ease"
                     }}
                     className="flex items-center justify-center gap-1 flex-row">
                     <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
