@@ -141,7 +141,7 @@ const Projects = () => {
                   onMouseOver={() => handleMouseOver(projects.projectsName)}
                   onMouseOut={() => handleMouseOut(projects.projectsName)}
                   style={{
-                    opacity: isMouseOver[projects.projectsName] ? "0.03" : "1",
+                    opacity: isMouseOver[projects.projectsName] ? "0.07" : "1",
                     transition: "opacity 1s ease, z-index 0.3s ease"
                   }}
                   className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
