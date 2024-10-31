@@ -22,7 +22,7 @@ import Vite from "../../imgs/skills/vite.png";
 import Vscode from "../../imgs/skills/vscode.png";
 import Yarn from "../../imgs/skills/yarn.png";
 import { LiTS } from "./style";
-import AnimatedSection from "../../components/AnimatedSection/AnimatedSection";
+import AnimatedSection from "../../components/AnimatedSection";
 
 const infoSkills = [
   {

@@ -14,20 +14,20 @@ import iMovi from "../../src/imgs/projects/iMovi.png";
 import EmBreve from "../../src/imgs/projects/em-breve.jpg";
 import DevMovies from "../../src/imgs/projects/movies.png";
 import TodolistFirebase from "../imgs/projects/todolist-firebase.png";
-import AnimatedSection from "../components/AnimatedSection/AnimatedSection";
+import AnimatedSection from "../components/AnimatedSection";
 
 const infoProjects = [
-  {
-    projectsImage: DevBills,
-    alt: "imagem do projeto dev bills",
-    projectsName: "DevBills",
-    description:
-      "Um painel financeiro onde você pode criar e gerenciar suas transações, especificando valores, datas, tipos de transações e categorias personalizadas.",
-    technologies:
-      " React, TypeScript, Docker, MongoDB, Node, Express, styled-components e HTML.",
-    links1: "https://devbills-front.vercel.app/",
-    links2: "https://github.com/dfagundes01/devbills-front",
-  },
+  // {
+  //   projectsImage: DevBills,
+  //   alt: "imagem do projeto dev bills",
+  //   projectsName: "DevBills",
+  //   description:
+  //     "Um painel financeiro onde você pode criar e gerenciar suas transações, especificando valores, datas, tipos de transações e categorias personalizadas.",
+  //   technologies:
+  //     " React, TypeScript, Docker, MongoDB, Node, Express, styled-components e HTML.",
+  //   links1: "https://devbills-front.vercel.app/",
+  //   links2: "https://github.com/dfagundes01/devbills-front",
+  // },
   {
     projectsImage: DevMovies,
     alt: "imagem do projeto dev movies",

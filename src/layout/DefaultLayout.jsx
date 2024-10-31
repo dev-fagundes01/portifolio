@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import Footer from '../components/Footer/Footer'
+import Footer from '../components/Footer'
 import Header from '../components/Header/Header'
 import Home from '../pages/Home'
 import AboutMe from '../pages/AboutMe'
@@ -12,7 +12,7 @@ import { darkTheme, LightTheme } from '../styles/theme'
 
 function DefaultLayout() {
   const [theme, setTheme] = useState(() => {
-    const savedTheme =localStorage.getItem('theme')
+    const savedTheme = localStorage.getItem('theme')
     return savedTheme || 'dark'
   });
 
