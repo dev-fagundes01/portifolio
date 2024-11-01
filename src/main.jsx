@@ -1,14 +1,14 @@
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-
-import GlobalStyles from './styles/globalStyles.js'
+import { RouterProvider } from 'react-router-dom'
 
 import './index.css'
-import DefaultLayout from './layout/DefaultLayout.jsx'
+import GlobalStyles from './styles/globalStyles.js'
+import routes from './routes'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <DefaultLayout/>
+  <StrictMode>
+    <RouterProvider router={routes} />
     <GlobalStyles />
-  </React.StrictMode>
+  </StrictMode>
 )

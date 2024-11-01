@@ -10,7 +10,7 @@ import Skills from '../pages/Skills/Skills'
 import { ThemeGlobal } from '../styles/globalStyles'
 import { darkTheme, LightTheme } from '../styles/theme'
 
-function DefaultLayout() {
+function PortfolioLayout() {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme')
     return savedTheme || 'dark'
@@ -45,4 +45,4 @@ function DefaultLayout() {
     </ThemeProvider>
   );
 }
-export default DefaultLayout
+export default PortfolioLayout
