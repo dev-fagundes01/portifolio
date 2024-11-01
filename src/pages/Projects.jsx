@@ -33,7 +33,7 @@ const infoProjects = [
     alt: "imagem do projeto dev movies",
     projectsName: "DevMovies",
     description:
-      "Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares,que vão estrear e muito mais.",
+      "Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares, vão estrear e muito mais.",
     technologies:
       " React.js, Javascript, styled-components, HTML e o Axios para consumir uma api publica.",
     links1: "https://dev-movies-df.netlify.app",
@@ -92,10 +92,12 @@ const infoProjects = [
 const Projects = () => {
   const [isMouseOver, setIsMouseOver] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobileOrMouseOver, setIsMobileOrMouseOver] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768)
+      setIsMobileOrMouseOver(window.innerWidth < 768)
     }
 
     window.addEventListener('resize', handleResize);
@@ -141,32 +143,32 @@ const Projects = () => {
                   onMouseOver={() => handleMouseOver(projects.projectsName)}
                   onMouseOut={() => handleMouseOut(projects.projectsName)}
                   style={{
-                    opacity: isMouseOver[projects.projectsName] ? "0.07" : "1",
+                    opacity: isMobileOrMouseOver ? "0.07" : isMouseOver[projects.projectsName] ? "0.07" : "1",
                     transition: "opacity 1s ease, z-index 0.3s ease"
                   }}
                   className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
                   src={projects.projectsImage}
                   alt={projects.alt}
                 />
-                <div className="w-full flex flex-col items-center gap-10 absolute top-16">
+                <div className="w-full flex flex-col items-center gap-2 absolute top-16 md:gap-3">
                   <div
                     onMouseOver={() => handleMouseOver(projects.projectsName)}
                     onMouseOut={() => handleMouseOut(projects.projectsName)}
                     style={{
-                      opacity: isMouseOver[projects.projectsName] ? "1" : "0",
+                      opacity: isMobileOrMouseOver ? "1" : isMouseOver[projects.projectsName] ? "1" : "0",
                       transition: "opacity 1s ease"
                     }}
-                    className="div-info flex flex-col w-3/5 gap-3"
+                    className="div-info flex flex-col w-3/5 md:gap-3"
                   >
                     <h5 className="text-lg">{projects.projectsName}</h5>
                     {
                       projects.status ? <span
                         className="text-rose-400">{projects.status}</span> : ''
                     }
-                    <p className="text-sm leading-none">{projects.description}</p>
-                    <p className="text-sm leading-none">
+                    <p className="text-xs leading-none mb-[6px] md:text-sm">{projects.description}</p>
+                    <p className="text-xs leading-none md:text-sm">
                       <span className="text-rose-400">
-                        Tecnologias
+                        Tecnologias:
                       </span>
                       <br />
                       {projects.technologies || projects.frontendTechnologies}
@@ -175,35 +177,31 @@ const Projects = () => {
                       {projects.backendTechnologies}
                     </p>
                   </div>
-                  <div
-                    onMouseOver={() => handleMouseOver(projects.projectsName)}
-                    onMouseOut={() => handleMouseOut(projects.projectsName)}
-                    style={{
-                      opacity: isMouseOver[projects.projectsName] ? "1" : "0.85",
-                      transition: "opacity 1s ease"
-                    }}
-                    className="flex items-center justify-center gap-1 flex-row">
-                    <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                      <a
-                        className="text-xs"
-                        target="_blank"
-                        href={projects.links1}
-                        rel="noreferrer"
-                      >
-                        Projeto
-                      </a>
-                    </button>
-                    <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-20 h-auto hover:bg-red-500 active:bg-red-700">
-                      <a
-                        className="text-xs"
-                        target="_blank"
-                        href={projects.links2}
-                        rel="noreferrer"
-                      >
-                        Repositório
-                      </a>
-                    </button>
-                  </div>
+                  {projects.links1 &&
+                    <div
+                      className="flex items-center justify-center gap-[.3rem] flex-row md:gap-1">
+                      <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-10 h-auto hover:bg-purple-500 active:bg-purple-700 md:w-20">
+                        <a
+                          className="text-sss text-white md:text-xs"
+                          target="_blank"
+                          href={projects.links1}
+                          rel="noreferrer"
+                        >
+                          Projeto
+                        </a>
+                      </button>
+                      <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-10 h-auto hover:bg-purple-500 active:bg-purple-700 md:w-20">
+                        <a
+                          className="text-sss text-white md:text-xs"
+                          target="_blank"
+                          href={projects.links2}
+                          rel="noreferrer"
+                        >
+                          Repositório
+                        </a>
+                      </button>
+                    </div>
+                  }
                 </div>
               </SwiperSlide>
             ))}

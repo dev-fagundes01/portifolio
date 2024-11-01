@@ -46,7 +46,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="w-full text-center text-ss md:text-xs">
-        &copy; 2023 Diego Fagundes. Todos os direitos reservados.
+        &copy; {new Date().getFullYear()} Diego Fagundes. Todos os direitos reservados.
       </div>
     </div>
   );
