@@ -16,10 +16,10 @@ function AboutMe() {
             src="https://github.com/dev-fagundes01.png"
             alt="imf-foto"
           />
-          <div className="flex flex-col ml-10 w-4/5 md:gap-2">
+          <div className="flex flex-col ml-2 w-4/5 md:ml-10 md:gap-2">
             <h2 className="text-xl md:text-5xl text-sky-400">Sobre mim</h2>
-            <h3 className="text-lg md:text-3xl">Escada, Pernambuco</h3>
-            <p className="text-sm md:mt-1 md:text-xl md:w-4/5">
+            <h3 className="text-base md:text-3xl">Escada, Pernambuco</h3>
+            <p className="text-xs md:mt-1 md:text-xl md:w-4/5">
               Sou Desenvolvedor Front-End, com conhecimento em HTML, CSS,
               Javascript, React.js, Node.js e sempre estudando para ser Full-Stack
               na{" "}

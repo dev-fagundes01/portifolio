@@ -35,7 +35,7 @@ function Header({ theme, themeToggler }) {
         <ul className="hidden md:flex gap-4">
           <li className="leading-normal h-3">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
+              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
               href="#início"
             >
               Início
@@ -43,7 +43,7 @@ function Header({ theme, themeToggler }) {
           </li>
           <li className="leading-normal h-3">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"              
+              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
               href="#sobre"
             >
               Sobre Mim
@@ -51,7 +51,7 @@ function Header({ theme, themeToggler }) {
           </li>
           <li className="leading-normal h-3">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
+              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
               href="#projetos"
             >
               Projetos
@@ -59,7 +59,7 @@ function Header({ theme, themeToggler }) {
           </li>
           <li className="leading-normal h-3">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-rose-900 text-2xl"
+              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
               href="#habilidades"
             >
               Habilidades
