@@ -3,11 +3,13 @@ import { Form, FormField, FormItem, FormLabel, FormControl, FormDescription, For
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 function SignupForm() {
   const [selectedImage, setSelectedImage] = useState(null)
+
+  const navigate = useNavigate()
 
   const form = useForm({
     defaultValues: {
@@ -134,9 +136,10 @@ function SignupForm() {
             )}
           />
 
-          <Button type="submit">Submit</Button>
+          <Button className='mx-[11.15rem]' type="submit">Cadastrar</Button>
         </form>
       </Form>
+      <Button onClick={() => navigate("/portfolio")}>Portfólio</Button>
     </div>
   )
 }

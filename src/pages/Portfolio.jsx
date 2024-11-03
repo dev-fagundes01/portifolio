@@ -6,7 +6,7 @@ import Header from '../components/Header/Header'
 import Home from '../pages/Home'
 import AboutMe from '../pages/AboutMe'
 import Project from '../pages/Projects'
-import Skills from '../pages/Skills/Skills'
+import Skills from './skills/Skills'
 import { ThemeGlobal } from '../styles/globalStyles'
 import { darkTheme, LightTheme } from '../styles/theme'
 

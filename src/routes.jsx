@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import RegisterInfo from "./pages/RegisterInfo";
-import PortfolioLayout from "./layout/Portfolio";
+import PortfolioLayout from "./pages/Portfolio";
 
 const router = createBrowserRouter([
   {
