@@ -7,14 +7,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import UserList from "../../src/imgs/projects/user-list.png";
-import Conversor from "../../src/imgs/projects/conversor.png";
-import DevBills from "../../src/imgs/projects/dev-bills.png";
-import iMovi from "../../src/imgs/projects/iMovi.png";
-import EmBreve from "../../src/imgs/projects/em-breve.jpg";
-import DevMovies from "../../src/imgs/projects/movies.png";
-import TodolistFirebase from "../imgs/projects/todolist-firebase.png";
-import AnimatedSection from "../components/AnimatedSection";
+import UserList from "../../imgs/projects/user-list.png";
+import Conversor from "../../imgs/projects/conversor.png";
+import DevBills from "../../imgs/projects/dev-bills.png";
+import iMovi from "../../imgs/projects/iMovi.png";
+import EmBreve from "../../imgs/projects/em-breve.jpg";
+import DevMovies from "../../imgs/projects/movies.png";
+import TodolistFirebase from "../../imgs/projects/todolist-firebase.png";
+import AnimatedSection from "../../components/AnimatedSection";
 
 const infoProjects = [
   // {
@@ -133,6 +133,7 @@ const Projects = () => {
             keyboard={true}
             modules={[Navigation, Pagination, Mousewheel, Keyboard]}
             className="block h-60 w-9/12 opacity-0 animate-toAppear md:hidden"
+            style={isMobile ? { '--swiper-navigation-size': '20px' } : { '--swiper-navigation-size': '40px' }}
           >
             {infoProjects.map((projects) => (
               <SwiperSlide

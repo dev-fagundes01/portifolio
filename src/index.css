@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: rgba(255, 255, 255, 0.1);
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -29,8 +30,9 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   }
+
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: rgba(255, 255, 255, 0.1);
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -56,11 +58,24 @@
     --chart-5: 340 75% 55%
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .spin-border::after {
+    content: '';
+    @apply block w-[15px] h-[15px] rounded-half border-4 border-black border-t-transparent animate-spin;
+  }
+
+  .spin-border-desktop::after {
+    content: '';
+    @apply block w-[30px] h-[30px] rounded-half border-4 border-black border-t-transparent animate-spin;
   }
 }

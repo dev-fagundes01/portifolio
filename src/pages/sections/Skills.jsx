@@ -21,7 +21,6 @@ import SQL from "../../imgs/skills/sql-server.png";
 import Vite from "../../imgs/skills/vite.png";
 import Vscode from "../../imgs/skills/vscode.png";
 import Yarn from "../../imgs/skills/yarn.png";
-import { LiTS } from "./style";
 import AnimatedSection from "../../components/AnimatedSection";
 
 const infoSkills = [
@@ -155,14 +154,14 @@ function Skills() {
           <div className="opacity-0 animate-toAppearPlus">
             <h3>Em Breve</h3>
             <ul className="grid place-items-center">
-              <LiTS className="relative flex flex-col items-center">
+              <li className="relative flex flex-col items-center">
                 <img
                   className="w-8 h-8 rounded-small bg-slate-500 md:w-14 md:h-14"
                   alt="SQL"
                   src={SQL}
                 />
-                <div className="w-8 md:w-14" />
-              </LiTS>
+                <div className="w-8 h-8 absolute top-0 left-0 rounded-small bg-background flex justify-center items-center spin-border md:w-14 md:h-14 md:spin-border-desktop" />
+              </li>
             </ul>
           </div>
         </div>

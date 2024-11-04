@@ -1,8 +1,8 @@
-import Download from "./../../src/imgs/others/download.png";
-import Livros from "./../../src/imgs/personal/livros.png";
-import Sports from "./../../src/imgs/personal/sports.png";
-import Xadrez from "./../../src/imgs/personal/xadrez.jpeg";
-import AnimatedSection from "../components/AnimatedSection";
+import Download from "./../../imgs/others/download.png";
+import Livros from "./../../imgs/personal/livros.png";
+import Sports from "./../../imgs/personal/sports.png";
+import Xadrez from "./../../imgs/personal/xadrez.jpeg";
+import AnimatedSection from "../../components/AnimatedSection";
 
 function AboutMe() {
   return (
