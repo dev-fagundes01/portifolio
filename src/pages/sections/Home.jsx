@@ -15,7 +15,7 @@ function Home() {
     align-items-center justify-center flex-col animate-mainShake hover:animate-stopAppear"
           >
             <h1 className="leading-normal text-2xl md:text-5xl ml-1 gm:ml-0">
-              Programador <span className="text-purple-700">Front-End</span>
+              Desenvolvedor <span className="text-purple-700">Web</span>
               <br />
               <span className="w-64 text-lg text-purple-600 flex md:w-40 md:text-2xl">Explorando o desconhecido, entregando o excepcional. Tecendo linhas de código para formar obras-primas digitais.</span>
             </h1>
