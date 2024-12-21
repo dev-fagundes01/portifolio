@@ -20,19 +20,10 @@ function AboutMe() {
             <h2 className="text-xl md:text-5xl text-sky-400">Sobre mim</h2>
             <h3 className="text-base md:text-3xl">Escada, Pernambuco</h3>
             <p className="text-xs md:mt-1 md:text-xl md:w-4/5">
-              Sou Desenvolvedor Front-End, com conhecimento em HTML, CSS,
-              Javascript, React.js, Node.js e sempre estudando para ser Full-Stack
-              na{" "}
-              <b>
-                <a href="https://www.linkedin.com/school/dev-club-devs/mycompany/">
-                  DevClub
-                </a>
-              </b>
-              , um bootcamp completo que ensina tudo que um full-stack precisa ter
-              e muito mais. Com essas tecnologias já desenvolvi alguns projetos
-              pessoais. Trabalho com desenvolvimento web na comunidade onde tenho
-              a oportunidade para ajudar aqueles que precisar e aperfeiçoar meus
-              conhecimentos.
+            Desenvolvedor web com experiência em JavaScript e React, além de outras tecnologias. Estou constantemente expandindo meus conhecimentos para me tornar um desenvolvedor Full-Stack, com foco em organização, boas práticas e eficiência no desenvolvimento de soluções. Ao longo da minha jornada, desenvolvi projetos pessoais e realizei trabalhos freelance, sempre aplicando as melhores técnicas e aprendizados adquiridos.
+            <br />  
+            <br />  
+            Atualmente, faço parte da comunidade DevClub, onde contribuo ativamente no desenvolvimento de projetos, aprimorando minhas habilidades e ajudando outros desenvolvedores. Sempre que possível, busco colaborar com projetos open-source, acreditando na importância do aprendizado contínuo e no compartilhamento de conhecimento.
             </p>
             <div>
               <h3 className="text-lg md:text-3xl text-sky-400">
