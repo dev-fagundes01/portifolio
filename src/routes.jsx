@@ -5,11 +5,11 @@ import PortfolioLayout from "./pages/Portfolio";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RegisterInfo />
+    element: <PortfolioLayout />
   },
   {
-    path: "/portfolio",
-    element: <PortfolioLayout />
+    path: "/register-portfolio",
+    element: <RegisterInfo />
   }
 ])
 
