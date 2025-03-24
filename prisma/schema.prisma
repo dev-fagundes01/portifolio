@@ -9,11 +9,26 @@ datasource db {
 }
 
 model Tecnologia {
-  id Int @id @default(autoincrement())
-  name String
-  description String
-  image String
-  highlight Boolean @default(false)
+  id            Int @id @default(autoincrement())
+  nome          String
+  descricao     String
+  imagem        String
+  destaque      Boolean   @default(false)
+  projetos      Projeto[]
 
   @@map("technologies")
+}
+
+model Projeto {
+  id            Int @id @default(autoincrement())
+  nome          String
+  descricao     String
+  imagens       String[]
+  nivel         Int
+  tipo          String
+  destaque      Boolean @default(false)
+  repositorio   String
+  tecnologias   Tecnologia[]
+
+  @@map("projetos")
 }
