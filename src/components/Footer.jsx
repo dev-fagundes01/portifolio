@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-import GitHub from "./../imgs/social/github.png";
-import Linkedin from "./../imgs/social/linkedin.png";
-import Whatsapp from "./../imgs/social/WhatsApp-Carousel.jpg";
+import GitHub from './../imgs/social/github.png'
+import Linkedin from './../imgs/social/linkedin.png'
+import Whatsapp from './../imgs/social/WhatsApp-Carousel.jpg'
 
 const Footer = () => {
   return (
@@ -46,10 +46,11 @@ const Footer = () => {
         </a>
       </div>
       <div className="w-full text-center text-ss md:text-xs">
-        &copy; {new Date().getFullYear()} Diego Fagundes. Todos os direitos reservados.
+        &copy; {new Date().getFullYear()} Diego Fagundes. Todos os direitos
+        reservados.
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

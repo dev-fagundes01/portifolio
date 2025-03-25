@@ -1,60 +1,81 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "standard",
-        "plugin:react-hooks/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "overrides": [],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "react-hooks",
-        "eslint-plugin-import-helpers"
-    ],
-    "rules": {
-        "prettier/prettier": [
-            "error",
-            {
-                "printWidth": 80,
-                "tabWidth": 2,
-                "singleQuote": true, // aspas simples
-                "trailingComma": "none", // virgula no fim da linha
-                "arrowParens": "always",
-                "semi": false, // ponto e virgula no fim da linha
-                "endOfLine": "auto"
-            }
-        ],
-        "react/react-in-jsx-scope": "off",
-        "react/prop-types": "off",
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "import-helpers/order-imports": [
-            "warn",
-            {
-                "newlinesBetween": "always", // new line between groups
-                "groups": [
-                    "/^react/",
-                    "module",
-                    "/^@shared/",
-                    [
-                        "parent",
-                        "sibling",
-                        "index"
-                    ]
-                ],
-                "alphabetize": {
-                    "order": "asc",
-                    "ignoreCase": true
-                }
-            }
-        ]
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "standard",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks",
+    "import",
+    "eslint-plugin-import-helpers"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "singleQuote": true, // aspas simples
+        "trailingComma": "none", // virgula no fim da linha
+        "arrowParens": "always",
+        "semi": false, // ponto e virgula no fim da linha
+        "endOfLine": "auto"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          ["builtin", "external"], // Módulos embutidos (ex: fs, path) e pacotes externos
+          "internal",              // Imports internos (se você usa paths internos com @)
+          ["parent", "sibling", "index"] // Imports relativos (../, ./)
+        ],
+        "alphabetize": {
+          "order": "asc",          // Ordenação crescente
+          "caseInsensitive": true  // Ignorar case
+        },
+        "newlines-between": "always" // Adiciona linha em branco entre grupos
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always", // new line between groups
+        "groups": [
+          "/^react/",
+          "module",
+          ["parent", "sibling"],
+          "/^../",
+          "index"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ]
+  }
 }

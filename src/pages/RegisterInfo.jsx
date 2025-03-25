@@ -1,10 +1,18 @@
-import { useForm } from "react-hook-form"
-import { Form, FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
+
+import { Button } from '@/components/ui/button'
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 
 function SignupForm() {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -13,13 +21,13 @@ function SignupForm() {
 
   const form = useForm({
     defaultValues: {
-      name: "",
-      projectlink: "",
-      repositorylink: "",
-      description: "",
-      technologies: "",
-      image: "",
-    },
+      name: '',
+      projectlink: '',
+      repositorylink: '',
+      description: '',
+      technologies: '',
+      image: ''
+    }
   })
 
   function onSubmit(data) {
@@ -45,9 +53,12 @@ function SignupForm() {
 
   return (
     <div className="h-screen flex flex-col justify-center items-center">
-      <h1 className='text-xl'>Cadastrar Informação</h1>
+      <h1 className="text-xl">Cadastrar Informação</h1>
       <Form {...form}>
-        <form className='w-full max-w-md space-y-2' onSubmit={form.handleSubmit(onSubmit)}>
+        <form
+          className="w-full max-w-md space-y-2"
+          onSubmit={form.handleSubmit(onSubmit)}
+        >
           <FormField
             control={form.control}
             name="name"
@@ -98,11 +109,15 @@ function SignupForm() {
                 <FormLabel>Imagem</FormLabel>
                 <FormControl>
                   <Input
-                    className='pt-1' type="file"
-                    accept="image/*" onChange={(e) => {
+                    className="pt-1"
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
                       handleImageChange(e)
                       onChange(e.target.value)
-                    }} {...field} />
+                    }}
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -136,10 +151,12 @@ function SignupForm() {
             )}
           />
 
-          <Button className='mx-[11.15rem]' type="submit">Cadastrar</Button>
+          <Button className="mx-[11.15rem]" type="submit">
+            Cadastrar
+          </Button>
         </form>
       </Form>
-      <Button onClick={() => navigate("/portfolio")}>Portfólio</Button>
+      <Button onClick={() => navigate('/portfolio')}>Portfólio</Button>
     </div>
   )
 }

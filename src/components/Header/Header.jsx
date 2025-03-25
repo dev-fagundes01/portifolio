@@ -1,19 +1,21 @@
-import { useState } from "react";
-import { BiMoon, BiSun } from "react-icons/bi";
-import { HiMenuAlt4 } from "react-icons/hi";
+import { useState } from 'react'
+import { BiMoon, BiSun } from 'react-icons/bi'
+import { HiMenuAlt4 } from 'react-icons/hi'
 
-import MenuMobile from "../MenuMobile/MenuMobile";
-import { Nav } from "./style";
+import MenuMobile from '../MenuMobile/MenuMobile'
+import { Nav } from './style'
 
 function Header({ theme, themeToggler }) {
-  const [menuIsVisible, setMenuIsVisible] = useState(false);
+  const [menuIsVisible, setMenuIsVisible] = useState(false)
 
   return (
     <header className="h-32 w-full fixed z-10 flex justify-between p-2 md:p-3">
       <div className="flex items-start pt-1 md:pt-0">
-        <h2 className="text-base md:text-2xl">Diego <span className="text-purple-600">Fagundes</span></h2>
+        <h2 className="text-base md:text-2xl">
+          Diego <span className="text-purple-600">Fagundes</span>
+        </h2>
         <button onClick={themeToggler}>
-          {theme === "light" ? (
+          {theme === 'light' ? (
             <BiMoon className="h-3 md:h-5" />
           ) : (
             <BiSun className="h-3 md:h-5" />
@@ -68,6 +70,6 @@ function Header({ theme, themeToggler }) {
         </ul>
       </Nav>
     </header>
-  );
+  )
 }
-export default Header;
+export default Header

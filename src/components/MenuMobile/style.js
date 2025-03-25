@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div.withConfig({
-  shouldForwardProp: (prop) => !['isVisible'].includes(prop),
+  shouldForwardProp: (prop) => !['isVisible'].includes(prop)
 })`
   cursor: pointer;
   margin-top: 1rem;
@@ -31,4 +31,4 @@ export const Container = styled.div.withConfig({
         pointer-events: all;
       `}
   }
-`;
+`

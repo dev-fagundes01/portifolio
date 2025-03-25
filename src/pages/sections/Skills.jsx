@@ -1,113 +1,113 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import Bootstrap from "../../imgs/skills/bootstrap_.svg";
-import CSS from "../../imgs/skills/css.png";
-import Express from "../../imgs/skills/express-original.svg";
-import Git from "../../imgs/skills/git.png";
-import HTML from "../../imgs/skills/html.png";
-import JS from "../../imgs/skills/js.png";
-import Json from "../../imgs/skills/json.png";
-import LogoFigma from "../../imgs/skills/LogoFigma.png";
-import Node from "../../imgs/skills/node.png";
-import React from "../../imgs/skills/react.png";
-import Responsividade from "../../imgs/skills/responsividade.png";
-import Sass from "../../imgs/skills/sass_icon.svg";
-import Styled from "../../imgs/skills/styled 1.svg";
-import Tailwind from "../../imgs/skills/tailwind.png";
-import TS from "../../imgs/skills/ts.png";
-import Prisma from "../../imgs/skills/prisma.png";
-import Mongo from "../../imgs/skills/mongodb_icon.png";
-import SQL from "../../imgs/skills/sql-server.png";
-import Vite from "../../imgs/skills/vite.png";
-import Vscode from "../../imgs/skills/vscode.png";
-import Yarn from "../../imgs/skills/yarn.png";
-import AnimatedSection from "../../components/AnimatedSection";
+import AnimatedSection from '../../components/AnimatedSection'
+import Bootstrap from '../../imgs/skills/bootstrap_.svg'
+import CSS from '../../imgs/skills/css.png'
+import Express from '../../imgs/skills/express-original.svg'
+import Git from '../../imgs/skills/git.png'
+import HTML from '../../imgs/skills/html.png'
+import JS from '../../imgs/skills/js.png'
+import Json from '../../imgs/skills/json.png'
+import LogoFigma from '../../imgs/skills/LogoFigma.png'
+import Mongo from '../../imgs/skills/mongodb_icon.png'
+import Node from '../../imgs/skills/node.png'
+import Prisma from '../../imgs/skills/prisma.png'
+import React from '../../imgs/skills/react.png'
+import Responsividade from '../../imgs/skills/responsividade.png'
+import Sass from '../../imgs/skills/sass_icon.svg'
+import SQL from '../../imgs/skills/sql-server.png'
+import Styled from '../../imgs/skills/styled 1.svg'
+import Tailwind from '../../imgs/skills/tailwind.png'
+import TS from '../../imgs/skills/ts.png'
+import Vite from '../../imgs/skills/vite.png'
+import Vscode from '../../imgs/skills/vscode.png'
+import Yarn from '../../imgs/skills/yarn.png'
 
 const infoSkills = [
   {
     icon: React,
-    skillsName: "React.JS",
+    skillsName: 'React.JS'
   },
   {
     icon: Node,
-    skillsName: "Node.JS",
+    skillsName: 'Node.JS'
   },
   {
     icon: Styled,
-    skillsName: "Styled-Component",
+    skillsName: 'Styled-Component'
   },
   {
     icon: JS,
-    skillsName: "JavaScript",
+    skillsName: 'JavaScript'
   },
   {
     icon: CSS,
-    skillsName: "CSS",
+    skillsName: 'CSS'
   },
   {
     icon: HTML,
-    skillsName: "HTML",
+    skillsName: 'HTML'
   },
   {
     icon: Json,
-    skillsName: "Json",
+    skillsName: 'Json'
   },
   {
     icon: Git,
-    skillsName: "Git",
+    skillsName: 'Git'
   },
   {
     icon: Express,
-    skillsName: "Express",
+    skillsName: 'Express'
   },
   {
     icon: Bootstrap,
-    skillsName: "Bootstrap",
+    skillsName: 'Bootstrap'
   },
   {
     icon: TS,
-    skillsName: "TypeScript",
+    skillsName: 'TypeScript'
   },
   {
     icon: Sass,
-    skillsName: "Sass",
+    skillsName: 'Sass'
   },
   {
     icon: Tailwind,
-    skillsName: "Tailwind CSS",
+    skillsName: 'Tailwind CSS'
   },
   {
     icon: LogoFigma,
-    skillsName: "Figma",
+    skillsName: 'Figma'
   },
   {
     icon: Vscode,
-    skillsName: "Vscode",
+    skillsName: 'Vscode'
   },
   {
     icon: Yarn,
-    skillsName: "Yarn",
+    skillsName: 'Yarn'
   },
   {
     icon: Responsividade,
-    skillsName: "Responsividade",
+    skillsName: 'Responsividade'
   },
   {
     icon: Vite,
-    skillsName: "Vite",
+    skillsName: 'Vite'
   },
   {
     icon: Mongo,
-    skillsName: "MongoDB",
+    skillsName: 'MongoDB'
   },
   {
     icon: Prisma,
-    skillsName: "Prisma",
-  },
-];
+    skillsName: 'Prisma'
+  }
+]
 
 function Skills() {
-  const [hoveredSkill, setHoveredSkill] = useState(null);
+  const [hoveredSkill, setHoveredSkill] = useState(null)
 
   const handleMouseEnter = (info) => {
     setHoveredSkill(info)
@@ -118,9 +118,7 @@ function Skills() {
   }
 
   return (
-    <section
-      className="h-screen grid items-center"
-      id="habilidades">
+    <section className="h-screen grid items-center" id="habilidades">
       <AnimatedSection>
         <div className="flex flex-col items-center justify-center gap-2">
           <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
@@ -134,12 +132,12 @@ function Skills() {
               >
                 <span
                   className={`
-                  ${hoveredSkill === info
-                      ? "opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40"
-                      : "opacity-20 text-sss duration-1000"
-                    }
-                  `
+                  ${
+                    hoveredSkill === info
+                      ? 'opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40'
+                      : 'opacity-20 text-sss duration-1000'
                   }
+                  `}
                 >
                   {info.skillsName}
                 </span>
@@ -167,6 +165,6 @@ function Skills() {
         </div>
       </AnimatedSection>
     </section>
-  );
+  )
 }
-export default Skills;
+export default Skills

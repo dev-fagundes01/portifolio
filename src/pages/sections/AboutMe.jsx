@@ -1,14 +1,15 @@
-import Download from "./../../imgs/others/download.png";
-import Livros from "./../../imgs/personal/livros.png";
-import Sports from "./../../imgs/personal/sports.png";
-import Xadrez from "./../../imgs/personal/xadrez.jpeg";
-import AnimatedSection from "../../components/AnimatedSection";
+import AnimatedSection from '../../components/AnimatedSection'
+import Download from './../../imgs/others/download.png'
+import Livros from './../../imgs/personal/livros.png'
+import Sports from './../../imgs/personal/sports.png'
+import Xadrez from './../../imgs/personal/xadrez.jpeg'
 
 function AboutMe() {
   return (
     <section
       className="h-screen grid place-items-center items-center"
-      id="sobre">
+      id="sobre"
+    >
       <AnimatedSection>
         <div className="flex flex-col items-center mt-3 opacity-0 md:flex-row md:ml-11 md:mt-0 animate-toAppear">
           <img
@@ -20,10 +21,21 @@ function AboutMe() {
             <h2 className="text-xl md:text-5xl text-sky-400">Sobre mim</h2>
             <h3 className="text-base md:text-3xl">Escada, Pernambuco</h3>
             <p className="text-xs md:mt-1 md:text-xl md:w-4/5">
-            Desenvolvedor web com experiência em JavaScript e React, além de outras tecnologias. Estou constantemente expandindo meus conhecimentos para me tornar um desenvolvedor Full-Stack, com foco em organização, boas práticas e eficiência no desenvolvimento de soluções. Ao longo da minha jornada, desenvolvi projetos pessoais e realizei trabalhos freelance, sempre aplicando as melhores técnicas e aprendizados adquiridos.
-            <br />  
-            <br />  
-            Atualmente, faço parte da comunidade DevClub, onde contribuo ativamente no desenvolvimento de projetos, aprimorando minhas habilidades e ajudando outros desenvolvedores. Sempre que possível, busco colaborar com projetos open-source, acreditando na importância do aprendizado contínuo e no compartilhamento de conhecimento.
+              Desenvolvedor web com experiência em JavaScript e React, além de
+              outras tecnologias. Estou constantemente expandindo meus
+              conhecimentos para me tornar um desenvolvedor Full-Stack, com foco
+              em organização, boas práticas e eficiência no desenvolvimento de
+              soluções. Ao longo da minha jornada, desenvolvi projetos pessoais
+              e realizei trabalhos freelance, sempre aplicando as melhores
+              técnicas e aprendizados adquiridos.
+              <br />
+              <br />
+              Atualmente, faço parte da comunidade DevClub, onde contribuo
+              ativamente no desenvolvimento de projetos, aprimorando minhas
+              habilidades e ajudando outros desenvolvedores. Sempre que
+              possível, busco colaborar com projetos open-source, acreditando na
+              importância do aprendizado contínuo e no compartilhamento de
+              conhecimento.
             </p>
             <div>
               <h3 className="text-lg md:text-3xl text-sky-400">
@@ -67,6 +79,6 @@ function AboutMe() {
         </div>
       </AnimatedSection>
     </section>
-  );
+  )
 }
-export default AboutMe;
+export default AboutMe

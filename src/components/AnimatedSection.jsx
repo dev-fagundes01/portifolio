@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 const AnimatedSection = ({ children }) => {
   return (
@@ -11,7 +11,7 @@ const AnimatedSection = ({ children }) => {
     >
       {children}
     </motion.div>
-  );
-};
+  )
+}
 
-export default AnimatedSection;
+export default AnimatedSection

@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const Nav = styled.nav.withConfig({
-  shouldForwardProp: (prop) => !['isVisible'].includes(prop),
+  shouldForwardProp: (prop) => !['isVisible'].includes(prop)
 })`
   cursor: pointer;
   padding-left: 5px;
@@ -14,4 +14,4 @@ export const Nav = styled.nav.withConfig({
         transition: 2s;
       }
     `}
-`;
+`

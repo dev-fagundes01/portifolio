@@ -1,6 +1,6 @@
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from 'react-icons/ai'
 
-import { Container } from "./style";
+import { Container } from './style'
 
 const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
   return (
@@ -44,7 +44,7 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
         </li>
       </ul>
     </Container>
-  );
-};
+  )
+}
 
-export default MenuMobile;
+export default MenuMobile
