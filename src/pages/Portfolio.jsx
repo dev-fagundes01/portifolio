@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-
 import Footer from '../components/Footer'
 import Header from '../components/Header/Header'
-import Home from './sections/Home'
-import AboutMe from './sections/AboutMe'
-import Project from './sections/Projects'
-import Skills from './sections/Skills'
 import { ThemeGlobal } from '../styles/globalStyles'
 import { darkTheme, LightTheme } from '../styles/theme'
+import AboutMe from './sections/AboutMe'
+import Home from './sections/Home'
+import Project from './sections/Projects'
+import Skills from './sections/Skills'
 
 function PortfolioLayout() {
   const [theme, setTheme] = useState(() => {
