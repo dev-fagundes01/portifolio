@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 
@@ -18,6 +18,7 @@ function SignupForm() {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const navigate = useNavigate()
+  const fileInputRef = useRef(null)
 
   const form = useForm({
     defaultValues: {
@@ -43,12 +44,21 @@ function SignupForm() {
 
     console.log(data)
     console.log(Object.fromEntries(formData))
+
+    clearInput()
   }
 
   const handleImageChange = (e) => {
     if (e.target.files?.[0]) {
       setSelectedImage(e.target.files[0])
     }
+  }
+
+  const clearInput = () => {
+    form.reset()
+    setSelectedImage(null)
+
+    if (fileInputRef.current) fileInputRef.current.value = ''
   }
 
   return (
@@ -66,7 +76,7 @@ function SignupForm() {
               <FormItem>
                 <FormLabel>Nome</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input required {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -80,7 +90,7 @@ function SignupForm() {
               <FormItem>
                 <FormLabel>Link do Projeto</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input required {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -94,7 +104,7 @@ function SignupForm() {
               <FormItem>
                 <FormLabel>Link do Repositório</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input required {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -112,11 +122,13 @@ function SignupForm() {
                     className="pt-1"
                     type="file"
                     accept="image/*"
+                    required
                     onChange={(e) => {
                       handleImageChange(e)
                       onChange(e.target.value)
                     }}
                     {...field}
+                    ref={fileInputRef}
                   />
                 </FormControl>
                 <FormMessage />
@@ -131,7 +143,7 @@ function SignupForm() {
               <FormItem>
                 <FormLabel>Descrição</FormLabel>
                 <FormControl>
-                  <Textarea {...field} />
+                  <Textarea required {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -145,7 +157,7 @@ function SignupForm() {
               <FormItem>
                 <FormLabel>Tecnologias</FormLabel>
                 <FormControl>
-                  <Textarea {...field} />
+                  <Textarea required {...field} />
                 </FormControl>
               </FormItem>
             )}
@@ -156,7 +168,7 @@ function SignupForm() {
           </Button>
         </form>
       </Form>
-      <Button onClick={() => navigate('/portfolio')}>Portfólio</Button>
+      <Button onClick={() => navigate('/')}>Portfólio</Button>
     </div>
   )
 }
