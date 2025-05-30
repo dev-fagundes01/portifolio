@@ -8,7 +8,7 @@ export const LightTheme = {
   boxShadow: 'rgba(233, 233, 233, 0.25)'
 }
 
-export const darkTheme = {
+export const DarkTheme = {
   textPrimary: '#ffff',
   textSecondary: '#ffff',
   primary: '#242424',
