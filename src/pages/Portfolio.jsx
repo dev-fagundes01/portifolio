@@ -1,5 +1,3 @@
-import { ThemeProvider } from 'styled-components'
-
 import Footer from '../components/Footer'
 import Header from '../components/Header/Header'
 import { ThemeGlobal } from '../styles/globalStyles'
@@ -8,8 +6,8 @@ import AboutMe from './sections/AboutMe'
 import Home from './sections/Home'
 import Project from './sections/Projects'
 import Skills from './sections/Skills'
-
 import { useTheme } from '@/context/ThemeContext'
+import { ThemeProvider } from 'styled-components'
 
 function PortfolioLayout() {
   const { theme, themeToggler } = useTheme()

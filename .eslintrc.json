@@ -41,22 +41,21 @@
         "endOfLine": "auto"
       }
     ],
-    "import/order": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "import/order": [
-      "warn",
+      "off",
       {
         "groups": [
           ["builtin", "external"], // Módulos embutidos (ex: fs, path) e pacotes externos
-          "internal",              // Imports internos (se você usa paths internos com @)
+          "internal", // Imports internos (se você usa paths internos com @)
           ["parent", "sibling", "index"] // Imports relativos (../, ./)
         ],
         "alphabetize": {
-          "order": "asc",          // Ordenação crescente
-          "caseInsensitive": true  // Ignorar case
+          "order": "asc", // Ordenação crescente
+          "caseInsensitive": true // Ignorar case
         },
         "newlines-between": "always" // Adiciona linha em branco entre grupos
       }

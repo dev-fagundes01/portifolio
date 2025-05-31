@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react'
 
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -14,6 +11,8 @@ import iMovi from '../../imgs/projects/iMovi.png'
 import DevMovies from '../../imgs/projects/movies.png'
 import TodolistFirebase from '../../imgs/projects/todolist-firebase.png'
 import UserList from '../../imgs/projects/user-list.png'
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 const infoProjects = [
   {
