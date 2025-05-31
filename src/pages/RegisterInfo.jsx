@@ -21,6 +21,7 @@ import { ThemeProvider } from 'styled-components'
 import { ThemeGlobal } from '@/styles/globalStyles'
 import { useTheme } from '@/context/ThemeContext'
 import { DarkTheme, LightTheme } from '@/styles/theme'
+import Loading from '@/imgs/others/loading.gif'
 
 function SignupForm() {
   const { theme } = useTheme()
@@ -53,8 +54,6 @@ function SignupForm() {
 
     if (selectedImage) formData.append('image', selectedImage)
 
-    console.log(data)
-
     clearInput()
   }
 
@@ -64,23 +63,20 @@ function SignupForm() {
     }
   }
 
-  const handleUpload = (e) => {
-    e.preventDefault()
-    setUploading(true)
-
-    if (!e.imagem) return alert('Por favor, selecione uma imagem!')
+  const handleUpload = () => {
+    if (!selectedImage) return alert('Por favor, selecione uma imagem!')
     if (!selectedImage.type.includes('image')) {
       return alert('Só é permitido imagens!')
     }
-    if (e.imagem.size > 1024 * 1024 * 2) {
+    if (selectedImage.size > 1024 * 1024 * 2) {
       return alert(
-        `A imagem ${e.imagem.name} não pode ser maior que 2MB. Imagem selecionada tem: ${(e.imagem.size / 1024 / 1024).toFixed(3)}MB`
+        `A imagem ${selectedImage.name} não pode ser maior que 2MB. Imagem selecionada tem: ${(selectedImage.size / 1024 / 1024).toFixed(3)}MB`
       )
     }
 
-    const imgName = createUniqueFileName(e.imagem.name)
-    const storageRef = ref(storage, `${e.category}/${imgName}`)
-    const uploadTask = uploadBytesResumable(storageRef, e.imagem)
+    const imgName = createUniqueFileName(selectedImage.name)
+    const storageRef = ref(storage, `projects/${imgName}`)
+    const uploadTask = uploadBytesResumable(storageRef, selectedImage)
 
     setUploading(true)
 
@@ -96,7 +92,6 @@ function SignupForm() {
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-          setSelectedImage(imgName)
           setUploading(false)
           // onSubmit(url)
         })
@@ -123,7 +118,7 @@ function SignupForm() {
           <h1 className="text-xl">Cadastrar Informação</h1>
           <Form {...form}>
             <form
-              className="w-full max-w-md space-y-2"
+              className="w-full max-w-md space-y-2 relative"
               onSubmit={form.handleSubmit(handleUpload)}
             >
               <FormField
@@ -168,6 +163,14 @@ function SignupForm() {
                 )}
               />
 
+              {uploading && (
+                <img
+                  className="w-12 h-12 mx-20 top-[2.75rem] absolute md:h-20 md:w-20 md:mx-[11.5rem] md:top-[11.25rem]"
+                  src={Loading}
+                  alt="Imagem de carregamento"
+                />
+              )}
+
               <FormField
                 control={form.control}
                 name="imagem"
@@ -182,7 +185,6 @@ function SignupForm() {
                         required
                         onChange={(e) => {
                           handleImageChange(e)
-                          onChange(e.target.value)
                         }}
                         {...field}
                         ref={fileInputRef}
@@ -219,6 +221,20 @@ function SignupForm() {
                   </FormItem>
                 )}
               />
+
+              {uploading && (
+                <div className="flex flex-col items-center">
+                  <div className="w-full h-3 bg-gray-300 rounded-full mt-2">
+                    <div
+                      className="h-full bg-blue-500 rounded-full"
+                      style={{ width: `${progress}%` }}
+                    />
+                  </div>
+                  <p className="text-gray-600">
+                    Uploading... {progress.toFixed(2)}%
+                  </p>
+                </div>
+              )}
 
               <Button className="mx-[11.15rem]" type="submit">
                 Cadastrar
