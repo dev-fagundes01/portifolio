@@ -118,47 +118,45 @@ function Skills() {
   }
 
   return (
-    <section className="h-screen grid items-center" id="habilidades">
+    <section className="grid h-screen items-center" id="habilidades">
       <AnimatedSection>
         <div className="flex flex-col items-center justify-center gap-2">
-          <h2 className="text-sky-500 text-2xl md:text-5xl">Habilidades</h2>
-          <ul className="flex justify-center w-3/5 gap-1 flex-wrap opacity-0 animate-toAppear md:w-2/5 md:mt-4">
+          <h2 className="text-2xl text-sky-500 md:text-5xl">Habilidades</h2>
+          <ul className="flex w-3/5 animate-toAppear flex-wrap justify-center gap-1 opacity-0 md:mt-4 md:w-2/5">
             {infoSkills.map((info) => (
               <li
-                className="flex flex-col items-center h-12 md:h-20 md:w-14 md:mx-1 "
+                className="flex h-12 flex-col items-center md:mx-1 md:h-20 md:w-14"
                 key={info.skillsName}
                 onMouseEnter={() => handleMouseEnter(info)}
                 onMouseLeave={handleMouseLeave}
               >
                 <span
-                  className={`
-                  ${
+                  className={` ${
                     hoveredSkill === info
-                      ? 'opacity-100 text-center justify-center text-xs duration-1000 md:text-lg md:w-40'
-                      : 'opacity-20 text-sss duration-1000'
-                  }
-                  `}
+                      ? 'justify-center text-center text-xs opacity-100 duration-1000 md:w-40 md:text-lg'
+                      : 'text-sss opacity-20 duration-1000'
+                  } `}
                 >
                   {info.skillsName}
                 </span>
                 <img
-                  className="cursor-pointer rounded-small bg-slate-500 w-8 h-8 md:w-14 md:h-14"
+                  className="h-8 w-8 cursor-pointer rounded-small bg-slate-500 md:h-14 md:w-14"
                   alt={info.skillsName}
                   src={info.icon}
                 />
               </li>
             ))}
           </ul>
-          <div className="opacity-0 animate-toAppearPlus">
+          <div className="animate-toAppearPlus opacity-0">
             <h3>Em Breve</h3>
             <ul className="grid place-items-center">
               <li className="relative flex flex-col items-center">
                 <img
-                  className="w-8 h-8 rounded-small bg-slate-500 md:w-14 md:h-14"
+                  className="h-8 w-8 rounded-small bg-slate-500 md:h-14 md:w-14"
                   alt="SQL"
                   src={SQL}
                 />
-                <div className="w-8 h-8 absolute top-0 left-0 rounded-small bg-background flex justify-center items-center spin-border md:w-14 md:h-14 md:spin-border-desktop" />
+                <div className="spin-border md:spin-border-desktop absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-small bg-background md:h-14 md:w-14" />
               </li>
             </ul>
           </div>

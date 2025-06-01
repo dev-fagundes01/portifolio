@@ -9,34 +9,34 @@ const MenuMobile = ({ menuIsVisible, setMenuIsVisible }) => {
         className="text-2xl"
         onClick={() => setMenuIsVisible(false)}
       />
-      <ul className="cursor-pointer flex flex-col items-center 2xl:hidden">
-        <li className="leading-3 h-6">
+      <ul className="flex cursor-pointer flex-col items-center 2xl:hidden">
+        <li className="h-6 leading-3">
           <a
-            className="text-xs no-underline text-purple-600 hover:duration-1000 hover:text-sky-300"
+            className="text-xs text-purple-600 no-underline hover:text-sky-300 hover:duration-1000"
             href="#início"
           >
             Inicio
           </a>
         </li>
-        <li className="leading-3 h-6">
+        <li className="h-6 leading-3">
           <a
-            className="text-xs no-underline text-purple-600 hover:duration-1000 hover:text-sky-300"
+            className="text-xs text-purple-600 no-underline hover:text-sky-300 hover:duration-1000"
             href="#sobre"
           >
             Sobre Mim
           </a>
         </li>
-        <li className="leading-3 h-6">
+        <li className="h-6 leading-3">
           <a
-            className="text-xs no-underline text-purple-600 hover:duration-1000 hover:text-sky-300"
+            className="text-xs text-purple-600 no-underline hover:text-sky-300 hover:duration-1000"
             href="#projetos"
           >
             Projetos
           </a>
         </li>
-        <li className="leading-3 h-6">
+        <li className="h-6 leading-3">
           <a
-            className="text-xs no-underline text-purple-600 hover:duration-1000 hover:text-sky-300"
+            className="text-xs text-purple-600 no-underline hover:text-sky-300 hover:duration-1000"
             href="#habilidades"
           >
             Habilidades

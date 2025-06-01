@@ -19,6 +19,7 @@
     "firebase": "^11.5.0",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.454.0",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.53.1",

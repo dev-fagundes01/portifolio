@@ -9,7 +9,7 @@ function Header({ theme, themeToggler }) {
   const [menuIsVisible, setMenuIsVisible] = useState(false)
 
   return (
-    <header className="h-32 w-full fixed z-10 flex justify-between p-2 md:p-3">
+    <header className="fixed z-10 flex h-32 w-full justify-between p-2 md:p-3">
       <div className="flex items-start pt-1 md:pt-0">
         <h2 className="text-base md:text-2xl">
           Diego <span className="text-purple-600">Fagundes</span>
@@ -23,7 +23,7 @@ function Header({ theme, themeToggler }) {
         </button>
       </div>
       <Nav className="h-8" isVisible={menuIsVisible}>
-        <div className="flex flex-col items-end mr-4 md:hidden">
+        <div className="mr-4 flex flex-col items-end md:hidden">
           <HiMenuAlt4
             className="menu text-2xl"
             onClick={() => setMenuIsVisible(true)}
@@ -34,34 +34,34 @@ function Header({ theme, themeToggler }) {
           />
         </div>
 
-        <ul className="hidden md:flex gap-4">
-          <li className="leading-normal h-3">
+        <ul className="hidden gap-4 md:flex">
+          <li className="h-3 leading-normal">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
+              className="cursor-pointer text-2xl text-purple-400 no-underline hover:text-sky-300 hover:duration-1000"
               href="#início"
             >
               Início
             </a>
           </li>
-          <li className="leading-normal h-3">
+          <li className="h-3 leading-normal">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
+              className="cursor-pointer text-2xl text-purple-400 no-underline hover:text-sky-300 hover:duration-1000"
               href="#sobre"
             >
               Sobre Mim
             </a>
           </li>
-          <li className="leading-normal h-3">
+          <li className="h-3 leading-normal">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
+              className="cursor-pointer text-2xl text-purple-400 no-underline hover:text-sky-300 hover:duration-1000"
               href="#projetos"
             >
               Projetos
             </a>
           </li>
-          <li className="leading-normal h-3">
+          <li className="h-3 leading-normal">
             <a
-              className="no-underline cursor-pointer text-purple-400 hover:duration-1000 hover:text-sky-300 text-2xl"
+              className="cursor-pointer text-2xl text-purple-400 no-underline hover:text-sky-300 hover:duration-1000"
               href="#habilidades"
             >
               Habilidades

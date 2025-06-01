@@ -109,10 +109,10 @@ const Projects = () => {
   }
 
   return (
-    <section className="h-screen relative" id="projetos">
+    <section className="relative h-screen" id="projetos">
       <AnimatedSection>
-        <div className="pt-24 flex flex-col items-center gap-3 bg-transparent">
-          <h2 className="text-2xl md:text-5xl text-sky-500">
+        <div className="flex flex-col items-center gap-3 bg-transparent pt-24">
+          <h2 className="text-2xl text-sky-500 md:text-5xl">
             Principais Projetos
           </h2>
           <Swiper
@@ -123,7 +123,7 @@ const Projects = () => {
             mousewheel={true}
             keyboard={true}
             modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-            className="block h-60 w-9/12 opacity-0 animate-toAppear md:hidden"
+            className="block h-60 w-9/12 animate-toAppear opacity-0 md:hidden"
             style={
               isMobile
                 ? { '--swiper-navigation-size': '20px' }
@@ -132,7 +132,7 @@ const Projects = () => {
           >
             {infoProjects.map((projects) => (
               <SwiperSlide
-                className="relative text-center bg-transparent flex justify-center items-center flex-col mx-0.5 animate-toAppearPlus"
+                className="relative mx-0.5 flex animate-toAppearPlus flex-col items-center justify-center bg-transparent text-center"
                 key={projects.projectsName}
               >
                 <img
@@ -146,11 +146,11 @@ const Projects = () => {
                         : '1',
                     transition: 'opacity 1s ease, z-index 0.3s ease'
                   }}
-                  className="block w-full h-full rounded-md opacity-10 hover:opacity-80"
+                  className="block h-full w-full rounded-md opacity-10 hover:opacity-80"
                   src={projects.projectsImage}
                   alt={projects.alt}
                 />
-                <div className="w-full flex flex-col items-center gap-2 absolute top-16 md:gap-3">
+                <div className="absolute top-16 flex w-full flex-col items-center gap-2 md:gap-3">
                   <div
                     onMouseOver={() => handleMouseOver(projects.projectsName)}
                     onMouseOut={() => handleMouseOut(projects.projectsName)}
@@ -162,7 +162,7 @@ const Projects = () => {
                           : '0',
                       transition: 'opacity 1s ease'
                     }}
-                    className="div-info flex flex-col w-3/5 md:gap-3"
+                    className="div-info flex w-3/5 flex-col md:gap-3"
                   >
                     <h5 className="text-lg">{projects.projectsName}</h5>
                     {projects.status ? (
@@ -170,7 +170,7 @@ const Projects = () => {
                     ) : (
                       ''
                     )}
-                    <p className="text-xs leading-none mb-[6px] md:text-sm">
+                    <p className="mb-[6px] text-xs leading-none md:text-sm">
                       {projects.description}
                     </p>
                     <p className="text-xs leading-none md:text-sm">
@@ -183,8 +183,8 @@ const Projects = () => {
                     </p>
                   </div>
                   {projects.links1 && (
-                    <div className="flex items-center justify-center gap-[.3rem] flex-row md:gap-1">
-                      <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-10 h-auto hover:bg-purple-500 active:bg-purple-700 md:w-20">
+                    <div className="flex flex-row items-center justify-center gap-[.3rem] md:gap-1">
+                      <button className="flex h-auto w-10 items-center justify-center rounded-full bg-blue-500 p-1 hover:bg-purple-500 active:bg-purple-700 md:w-20">
                         <a
                           className="text-sss text-white md:text-xs"
                           target="_blank"
@@ -194,7 +194,7 @@ const Projects = () => {
                           Projeto
                         </a>
                       </button>
-                      <button className="flex items-center justify-center bg-blue-500 rounded-full p-1 w-10 h-auto hover:bg-purple-500 active:bg-purple-700 md:w-20">
+                      <button className="flex h-auto w-10 items-center justify-center rounded-full bg-blue-500 p-1 hover:bg-purple-500 active:bg-purple-700 md:w-20">
                         <a
                           className="text-sss text-white md:text-xs"
                           target="_blank"
