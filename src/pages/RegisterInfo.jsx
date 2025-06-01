@@ -1,11 +1,8 @@
-import { collection, doc } from 'firebase/firestore'
-import { db, storage } from '../../config/firebaseConfig '
-
-import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 
+import { db, storage } from '../../config/firebaseConfig'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -17,11 +14,13 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { ThemeProvider } from 'styled-components'
-import { ThemeGlobal } from '@/styles/globalStyles'
 import { useTheme } from '@/context/ThemeContext'
-import { DarkTheme, LightTheme } from '@/styles/theme'
 import Loading from '@/imgs/others/loading.gif'
+import { ThemeGlobal } from '@/styles/globalStyles'
+import { DarkTheme, LightTheme } from '@/styles/theme'
+import { collection, doc } from 'firebase/firestore'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+import { ThemeProvider } from 'styled-components'
 
 function SignupForm() {
   const { theme } = useTheme()
@@ -55,12 +54,6 @@ function SignupForm() {
     if (selectedImage) formData.append('image', selectedImage)
 
     clearInput()
-  }
-
-  const handleImageChange = (e) => {
-    if (e.target.files?.[0]) {
-      setSelectedImage(e.target.files[0])
-    }
   }
 
   const handleUpload = () => {
@@ -114,11 +107,11 @@ function SignupForm() {
   return (
     <ThemeProvider theme={theme === 'light' ? LightTheme : DarkTheme}>
       <ThemeGlobal>
-        <div className="h-screen flex flex-col justify-center items-center">
+        <div className="flex h-screen flex-col items-center justify-center">
           <h1 className="text-xl">Cadastrar Informação</h1>
           <Form {...form}>
             <form
-              className="w-full max-w-md space-y-2 relative"
+              className="relative w-full max-w-md space-y-2"
               onSubmit={form.handleSubmit(handleUpload)}
             >
               <FormField
@@ -165,7 +158,7 @@ function SignupForm() {
 
               {uploading && (
                 <img
-                  className="w-12 h-12 mx-20 top-[2.75rem] absolute md:h-20 md:w-20 md:mx-[11.5rem] md:top-[11.25rem]"
+                  className="absolute top-[2.75rem] mx-20 h-12 w-12 md:top-[11.25rem] md:mx-[11.5rem] md:h-20 md:w-20"
                   src={Loading}
                   alt="Imagem de carregamento"
                 />
@@ -184,7 +177,9 @@ function SignupForm() {
                         accept="image/*"
                         required
                         onChange={(e) => {
-                          handleImageChange(e)
+                          if (e.target.files?.[0]) {
+                            setSelectedImage(e.target.files[0])
+                          }
                         }}
                         {...field}
                         ref={fileInputRef}
@@ -224,9 +219,9 @@ function SignupForm() {
 
               {uploading && (
                 <div className="flex flex-col items-center">
-                  <div className="w-full h-3 bg-gray-300 rounded-full mt-2">
+                  <div className="mt-2 h-3 w-full rounded-full bg-gray-300">
                     <div
-                      className="h-full bg-blue-500 rounded-full"
+                      className="h-full rounded-full bg-blue-500"
                       style={{ width: `${progress}%` }}
                     />
                   </div>
