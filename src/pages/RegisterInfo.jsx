@@ -18,7 +18,7 @@ import { useTheme } from '@/context/ThemeContext'
 import Loading from '@/imgs/others/loading.gif'
 import { ThemeGlobal } from '@/styles/globalStyles'
 import { DarkTheme, LightTheme } from '@/styles/theme'
-import { collection, doc } from 'firebase/firestore'
+import { addDoc, collection, doc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { ThemeProvider } from 'styled-components'
 
@@ -36,24 +36,37 @@ function SignupForm() {
       name: '',
       project_link: '',
       repository_link: '',
+      alt: '',
       description: '',
       technologies: '',
-      image: ''
+      imagem: ''
     }
   })
 
-  function onSubmit(data) {
-    const formData = new FormData()
+  async function onSubmit(imgURL) {
+    const formData = form.getValues()
 
-    formData.append('name', data.name)
-    formData.append('project-link', data.project_link)
-    formData.append('repository-link', data.repository_link)
-    formData.append('description', data.description)
-    formData.append('technologies', data.technologies)
+    const docData = {
+      name: formData.name || '',
+      project_link: formData.project_link || '',
+      repository_link: formData.repository_link || '',
+      alt: formData.alt || '',
+      description: formData.description || '',
+      technologies: formData.technologies || '',
+      imagem: imgURL
+    }
 
-    if (selectedImage) formData.append('image', selectedImage)
+    try {
+      const collectionRef = collection(db, 'projects')
+      await addDoc(collectionRef, docData)
+      console.log(formData)
 
-    clearInput()
+      clearInput()
+      setUploading(false)
+    } catch (error) {
+      console.log(error)
+      setUploading(false)
+    }
   }
 
   const handleUpload = () => {
@@ -67,11 +80,11 @@ function SignupForm() {
       )
     }
 
+    setUploading(true)
+
     const imgName = createUniqueFileName(selectedImage.name)
     const storageRef = ref(storage, `projects/${imgName}`)
     const uploadTask = uploadBytesResumable(storageRef, selectedImage)
-
-    setUploading(true)
 
     uploadTask.on(
       'state_changed',
@@ -85,8 +98,7 @@ function SignupForm() {
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-          setUploading(false)
-          // onSubmit(url)
+          onSubmit(url)
         })
       }
     )
@@ -130,7 +142,7 @@ function SignupForm() {
 
               <FormField
                 control={form.control}
-                name="project-link"
+                name="project_link"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Link do Projeto</FormLabel>
@@ -144,7 +156,7 @@ function SignupForm() {
 
               <FormField
                 control={form.control}
-                name="repository-link"
+                name="repository_link"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Link do Repositório</FormLabel>
@@ -184,6 +196,20 @@ function SignupForm() {
                         {...field}
                         ref={fileInputRef}
                       />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="alt"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Alt</FormLabel>
+                    <FormControl>
+                      <Input required {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
