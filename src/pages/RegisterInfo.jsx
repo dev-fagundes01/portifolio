@@ -161,7 +161,7 @@ function SignupForm() {
                   <FormItem>
                     <FormLabel>Link do Repositório</FormLabel>
                     <FormControl>
-                      <Input required {...field} />
+                      <Input {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
