@@ -5,82 +5,12 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 import AnimatedSection from '../../components/AnimatedSection'
-import Conversor from '../../imgs/projects/conversor.png'
-import EmBreve from '../../imgs/projects/em-breve.jpg'
-import iMovi from '../../imgs/projects/iMovi.png'
-import DevMovies from '../../imgs/projects/movies.png'
-import TodolistFirebase from '../../imgs/projects/todolist-firebase.png'
-import UserList from '../../imgs/projects/user-list.png'
+import { useData } from '../../context/DataContext'
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-const infoProjects = [
-  {
-    projectsImage: DevMovies,
-    alt: 'imagem do projeto dev movies',
-    projectsName: 'DevMovies',
-    description:
-      'Um site que você poderá pesquisar por filmes e series, ver os trailers, quais são os populares, vão estrear e muito mais.',
-    technologies:
-      ' React.js, Javascript, styled-components, HTML e o Axios para consumir uma api publica.',
-    links1: 'https://dev-movies-df.netlify.app',
-    links2: 'https://github.com/DiegoSilva1919/dev-movies'
-  },
-  {
-    projectsImage: UserList,
-    alt: 'imagem do projeto User List',
-    projectsName: 'User List',
-    description:
-      'Você poderá cadastrar usuários e, em uma página dedicada, visualizar, editar ou excluir seus registros conforme necessário.',
-    technologies:
-      ' React.js, Node.js, MongoDB, Prisma, JavaScript, styled-components e HTML',
-    links1: 'https://react-app-devclub.netlify.app/',
-    links2: 'https://github.com/dfagundes01/user-list'
-  },
-  {
-    projectsImage: EmBreve,
-    alt: 'imagem do projeto User List',
-    projectsName: 'Hamburgueria',
-    status: 'Em Breve',
-    description: 'Projeto será feito em React.js e Node.js',
-    frontendTechnologies:
-      'Front-End: Axios, Styled-Components, React-Toastify, Mui-Material, Hook-Form, Yup, Context-Api',
-    backendTechnologies:
-      'Back-End: Docker, Express, Token JWT, Multer, Yup, Bcrypt, Mongoose, Sequelize, PostgreSQL, MongoDB'
-  },
-  {
-    projectsImage: TodolistFirebase,
-    alt: 'imagem do projeto todolist firebase ',
-    projectsName: 'TodoList',
-    description: 'Projeto feito com javascript vanilla e Firebase',
-    technologies: ' JavaScript, CSS, HTML e Firebase.',
-    links1: 'https://todolist-2c452.firebaseapp.com/',
-    links2:
-      'https://github.com/dfagundes2001/todoList-firebase?tab=readme-ov-file'
-  },
-  {
-    projectsImage: Conversor,
-    alt: 'imagem do projeto conversor',
-    projectsName: 'Conversor de Moedas',
-    description:
-      'Nele podera converter o Real em Dolar Americano, Euro e Bitcoin.',
-    technologies: ' JavaScript, CSS, HTML.',
-    links1: 'https://conversor-df.netlify.app',
-    links2: 'https://github.com/DiegoSilva1919/conversor'
-  },
-  {
-    projectsImage: iMovi,
-    alt: 'imagem do projeto iMovi',
-    projectsName: 'iMovi',
-    description:
-      'Você vai ver um layout moderno de uma empresa do ramo de construção com informações da empresa, design de projetos e outras coisas.',
-    technologies: ' Framework Bootstrap.',
-    links1: 'https://i-movi-xi.vercel.app/',
-    links2: 'https://github.com/DiegoSilva1919/iMovi'
-  }
-]
-
 const Projects = () => {
+  const { projects } = useData()
   const [isMouseOver, setIsMouseOver] = useState(true)
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
   const [isMobileOrMouseOver, setIsMobileOrMouseOver] = useState(
@@ -130,65 +60,65 @@ const Projects = () => {
                 : { '--swiper-navigation-size': '40px' }
             }
           >
-            {infoProjects.map((projects) => (
+            {projects.sort((a, b) => a.index - b.index).map((project) => (
               <SwiperSlide
                 className="relative mx-0.5 flex animate-toAppearPlus flex-col items-center justify-center bg-transparent text-center"
-                key={projects.projectsName}
+                key={project.name}
               >
                 <img
-                  onMouseOver={() => handleMouseOver(projects.projectsName)}
-                  onMouseOut={() => handleMouseOut(projects.projectsName)}
+                  onMouseOver={() => handleMouseOver(project.name)}
+                  onMouseOut={() => handleMouseOut(project.name)}
                   style={{
                     opacity: isMobileOrMouseOver
                       ? '0.07'
-                      : isMouseOver[projects.projectsName]
+                      : isMouseOver[project.name]
                         ? '0.07'
                         : '1',
                     transition: 'opacity 1s ease, z-index 0.3s ease'
                   }}
                   className="block h-full w-full rounded-md opacity-10 hover:opacity-80"
-                  src={projects.projectsImage}
-                  alt={projects.alt}
+                  src={project.imagem}
+                  alt={project.alt}
                 />
                 <div className="absolute top-16 flex w-full flex-col items-center gap-2 md:gap-3">
                   <div
-                    onMouseOver={() => handleMouseOver(projects.projectsName)}
-                    onMouseOut={() => handleMouseOut(projects.projectsName)}
+                    onMouseOver={() => handleMouseOver(project.name)}
+                    onMouseOut={() => handleMouseOut(project.name)}
                     style={{
                       opacity: isMobileOrMouseOver
                         ? '1'
-                        : isMouseOver[projects.projectsName]
+                        : isMouseOver[project.name]
                           ? '1'
                           : '0',
                       transition: 'opacity 1s ease'
                     }}
                     className="div-info flex w-3/5 flex-col md:gap-3"
                   >
-                    <h5 className="text-lg">{projects.projectsName}</h5>
-                    {projects.status ? (
-                      <span className="text-rose-400">{projects.status}</span>
+                    <h5 className="text-lg">{project.name}</h5>
+                    {project.status ? (
+                      <span className="text-rose-400">{project.status}</span>
                     ) : (
                       ''
                     )}
                     <p className="mb-[6px] text-xs leading-none md:text-sm">
-                      {projects.description}
+                      {project.description}
                     </p>
                     <p className="text-xs leading-none md:text-sm">
                       <span className="text-rose-400">Tecnologias:</span>
                       <br />
-                      {projects.technologies || projects.frontendTechnologies}
+                      {project.technologies || project.frontendTechnologies}
                       <br />
                       <br />
-                      {projects.backendTechnologies}
+                      {project.backendTechnologies}
                     </p>
                   </div>
-                  {projects.links1 && (
+                  {project.project_link && (
                     <div className="flex flex-row items-center justify-center gap-[.3rem] md:gap-1">
                       <button className="flex h-auto w-10 items-center justify-center rounded-full bg-blue-500 p-1 hover:bg-purple-500 active:bg-purple-700 md:w-20">
                         <a
                           className="text-sss text-white md:text-xs"
                           target="_blank"
-                          href={projects.links1}
+                          href={project.project_link}
                           rel="noreferrer"
                         >
                           Projeto
@@ -198,7 +128,7 @@ const Projects = () => {
                         <a
                           className="text-sss text-white md:text-xs"
                           target="_blank"
-                          href={projects.links2}
+                          href={project.repository_link}
                           rel="noreferrer"
                         >
                           Repositório
